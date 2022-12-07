@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 .hero{
-    background: #f8f5e6;
+    background: #666;
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -18,8 +18,8 @@
 .header {
     padding: 30px;
     text-align: center;
-    background: #f8f5e6;
-    color: black;
+    background: #666;
+    color: #f8f5e6;
  }
  .social{
     color: #aaaaaa;
@@ -31,15 +31,16 @@
     color: #333333;
  }
 .topnav {
-    background-color: #f8f5e6;
+    background-color: #666;
     overflow: hidden;
   }
   .topnav a {
     float: left;
-    color: #333;
+    color: #f8f5e6;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    text-align: center;
     font-size: 17px;
   }
   .topnav a:hover {
