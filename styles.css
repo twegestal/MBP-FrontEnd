@@ -1,49 +1,105 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'poppins', sans-serif;
-    box-sizing: border-box;
+body{
+  margin: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+  background-color: #666;
 }
-.hero{
-    background: #666;
-    min-height: 100vh;
-    width: 100%;
-    position: relative;
+
+#wrapper {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 34%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  "header header header"
+  "main main main"
+  "footer footer footer"
 }
-.menu-img{
-    position: relative;
-    max-width: 200px;
-    max-height: 200px;
+
+.social{
+
+  color: #aaaaaa;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 10px;
 }
-.header {
-    padding: 30px;
-    text-align: center;
-    background: #666;
-    color: #f8f5e6;
- }
- .social{
-    color: #aaaaaa;
-    transition: color 0.2s;
-    text-decoration: none;
-    margin: 0 10px;
- }
- .social:hover{
-    color: #333333;
- }
-.topnav {
-    background-color: #666;
-    overflow: hidden;
-  }
-  .topnav a {
-    float: left;
-    color: #f8f5e6;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 17px;
-  }
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+
+.social:hover{
+
+  color: #333333; 
+}
+
+#wrapper > header {
+  grid-area: header;
+  height: 80px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: #666;
+  width: 100%;
+  z-index: 2;
+  box-shadow: #333333 0px 1px 5px;
+  justify-content: center;
+  transition: box-shadaw 0.2s ease;
+}
+
+
+.topnav a {
+  float: left;
+  color: #f8f5e6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 10px;
+}
+
+#wrapper > main {
+  grid-area: main;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  padding-top: 10px;
+}
+
+.hero h1 {
+
+  text-align: center;
+  color: #f8f5e6;
+}
+
+#wrapper > footer {
+  grid-area: footer;
+  border-top: 1px solid #333333;
+  padding: 30px 300px;
+}
+
+#wrapper > footer #container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+#container h4 {
+  padding-left: 15px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+#container ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#container li {
+  margin-bottom: 15px;
+  font-family: 'Exo 2', sans-serif;
+
+}
