@@ -1,6 +1,6 @@
 body{
   margin: 0;
-  font-family: 'poppins', sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   background-color: #666;
 }
@@ -17,22 +17,9 @@ body{
   "footer footer footer"
 }
 
-.social{
-
-  color: #aaaaaa;
-  transition: color 0.2s;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.social:hover{
-
-  color: #333333; 
-}
-
 #wrapper > header {
   grid-area: header;
-  height: 80px;
+  height: 70px;
   position: fixed;
   display: flex;
   align-items: center;
@@ -40,19 +27,41 @@ body{
   width: 100%;
   z-index: 2;
   box-shadow: #333333 0px 1px 5px;
-  justify-content: center;
   transition: box-shadaw 0.2s ease;
 }
 
+h1 {
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 200px 0 22px;
+  text-decoration: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #333333;
+  
+}
 
 .topnav a {
   float: left;
   color: #f8f5e6;
-  text-align: center;
-  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  padding: 8px 10px;
   text-decoration: none;
   text-align: center;
-  font-size: 17px;
+  font-size: 12px;
+}
+
+.social {
+  margin-top: px;
+
+}
+
+.social > ion-icon{
+  font-size: 20px;
+  text-decoration: none;
+  color: #333333;
+
 }
 
 .topnav a:hover {
@@ -63,7 +72,7 @@ body{
 
 #wrapper > main {
   grid-area: main;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 70px);
   margin-top: 80px;
   padding-top: 10px;
 }
@@ -88,18 +97,9 @@ body{
 }
 
 #container h4 {
-  padding-left: 15px;
-  margin: 0;
-  text-transform: uppercase;
+  margin: 0 0 0 10px;
+  padding: 0;
+  text-transform: none;
   font-size: 14px;
-}
-#container ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-#container li {
-  margin-bottom: 15px;
   font-family: 'Exo 2', sans-serif;
-
 }
