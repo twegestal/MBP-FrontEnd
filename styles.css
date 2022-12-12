@@ -52,11 +52,6 @@ h1 {
   font-size: 12px;
 }
 
-.social {
-  margin-top: px;
-
-}
-
 .social > ion-icon{
   font-size: 20px;
   text-decoration: none;
@@ -72,7 +67,7 @@ h1 {
 
 #wrapper > main {
   grid-area: main;
-  min-height: calc(100vh - 70px);
+  min-height: calc(80vh - 70px);
   margin-top: 65px;
   padding-top: 10px;
 }
@@ -123,6 +118,137 @@ h1 {
   border-radius: 10px;
 
 }
+
+.unicorn {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.unicorn-inläg {
+  background-color: rgba(255,255,255, 0.4);
+  width: 485px;
+  height: 400px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  float: left;
+}
+
+
+.unicorn-inläg > .unicorn-picture img {
+  border-radius: 5px;
+  max-width: 300px;
+  max-height: 200px;
+  display: block;
+  float: right;
+  padding: 2px ;
+  
+  
+}
+
+.unicorn-inläg > .unicorn-heading {
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.unicorn-inläg > .unicorn-heading h3, .unicorn-inläg > .unicorn-description p{
+  margin: 0;
+}
+
+.unicorn-inläg > .unicorn-heading h3 {
+  font-size: 16px;
+  color:#333333;
+
+}
+
+.unicorn-inläg > .unicorn-description {
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.info-ruta {
+  background-color: rgba(255,255,255, 0.4);
+  width: 500px;
+  min-height: 300px;
+  border-radius: 5px;
+  border: 1px solid rgb(38 143 255);
+  margin: 10px auto;
+}
+
+.info-ruta h5 {
+  font-size: 20px;
+  text-decoration: none;
+  margin: 20px;
+  padding-top: 30px;
+
+}
+
+.info-ruta p {
+  margin: 20px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.info-ruta button {
+  color: #f8f5e6;
+  background-color: rgb(38 143 255);
+  text-decoration: none;
+  text-align: center;
+  margin: 30px 0 0 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+
+}
+
+.info-ruta button:hover {
+  background-color: rgb(38 143 255 / 50%);
+  color: black;
+  border-radius: 10px;
+
+}
+
+.kontakt-form > form {
+  display: grid;
+
+}
+
+.kontakt-form > form label {
+  margin-left: 20px;
+}
+
+.kontakt-form > form input, select, textarea {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid rgb(38 143 255 / 50%);
+  border-radius: 5px;
+  resize: vertical;
+  margin: 6px 0 10px 20px;
+  
+}
+
+.kontakt-form > form input[type=submit] {
+  background-color: rgb(38 143 255);
+  color: black;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.kontakt-form > form input[type=submit]:hover {
+  background-color: rgb(38 143 255 / 50%);
+  color: #333333;
+}
+
+
 
 #wrapper > footer {
   grid-area: footer;
