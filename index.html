@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Corinthia&display=swap" rel="stylesheet">
     <style> @import url('https://fonts.googleapis.com/css2?family=Corinthia&display=swap'); </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
 </head>
 <body>
@@ -34,7 +35,8 @@
         </header>
         <main>
             <div class="välkommen">
-                <h2>Såg du en unicorn?</h2>
+                <h2>Välkommen!</h2>
+                <p>Här kan du läsa om hittade Unicorns, men även söka och lägga till Unicorns.</p>
                 <p> Tror du att du såg en unicorn? Här kan du beskriva vad du har sett!</p>
 
                 <form target="_parent">
@@ -47,55 +49,94 @@
             </div>
 
             <div class="unicorn">
+
                 <div class="unicorn-inläg">
+
                     <div class="unicorn-picture">
                         <img src="unicorn 1.0.jpg" alt="unicorn">
-
                     </div>
+
                     <div class="unicorn-heading">
                         <h3>The god of Unicorns</h3>
-
                     </div>
+
                     <div class="unicorn-description">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem ratione velit veritatis cum asperiores harum quia quis modi rem aliquam tenetur officiis, ipsum voluptatibus perferendis quidem, perspiciatis ea, repellendus esse cupiditate deserunt quaerat! Ratione aperiam facere vitae! Voluptates, obcaecati fugiat, libero tenetur harum ipsam esse expedita optio soluta corporis quidem dolore exercitationem aliquam veniam velit nihil reprehenderit assumenda illum similique? Quaerat ut amet maiores velit voluptas doloribus accusamus expedita ab architecto veritatis. Odit quas praesentium a adipisci perspiciatis officia aspernatur dolores illo. Nemo, quasi! Dolore provident asperiores beatae eveniet accusamus, dignissimos fuga quis est corporis. Aliquam voluptas sed voluptatum.</p>
 
                     </div>
-                </div>
-            </div>
 
-            <div class="unicorn">
+                    <div class="icons">
+                        <span> <i class="fas fa-location"></i>Skåne Sverige</span>
+                        <span> <i class="fas fa-user"></i>by admin </span>
+                    </div>
+
+                </div>
+
                 <div class="unicorn-inläg">
+
                     <div class="unicorn-picture">
                         <img src="unicorn.jpg" alt="unicorn">
-
                     </div>
+
                     <div class="unicorn-heading">
                         <h3>The god of Unicorns</h3>
-
                     </div>
+
                     <div class="unicorn-description">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem ratione velit veritatis cum asperiores harum quia quis modi rem aliquam tenetur officiis, ipsum voluptatibus perferendis quidem, perspiciatis ea, repellendus esse cupiditate deserunt quaerat! Ratione aperiam facere vitae! Voluptates, obcaecati fugiat, libero tenetur harum ipsam esse expedita optio soluta corporis quidem dolore exercitationem aliquam veniam velit nihil reprehenderit assumenda illum similique? Quaerat ut amet maiores velit voluptas doloribus accusamus expedita ab architecto veritatis. Odit quas praesentium a adipisci perspiciatis officia aspernatur dolores illo. Nemo, quasi! Dolore provident asperiores beatae eveniet accusamus, dignissimos fuga quis est corporis. Aliquam voluptas sed voluptatum.</p>
 
                     </div>
-                </div>
-            </div>
 
-            <div class="unicorn">
+                    <div class="icons">
+                        <span> <i class="fas fa-location"></i>Skåne Sverige</span>
+                        <span> <i class="fas fa-user"></i>by admin </span>
+                    </div>
+
+                </div>
+
                 <div class="unicorn-inläg">
+
                     <div class="unicorn-picture">
                         <img src="unicorn 1.0.jpg" alt="unicorn">
-
                     </div>
+
                     <div class="unicorn-heading">
                         <h3>The god of Unicorns</h3>
-
                     </div>
+
                     <div class="unicorn-description">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem ratione velit veritatis cum asperiores harum quia quis modi rem aliquam tenetur officiis, ipsum voluptatibus perferendis quidem, perspiciatis ea, repellendus esse cupiditate deserunt quaerat! Ratione aperiam facere vitae! Voluptates, obcaecati fugiat, libero tenetur harum ipsam esse expedita optio soluta corporis quidem dolore exercitationem aliquam veniam velit nihil reprehenderit assumenda illum similique? Quaerat ut amet maiores velit voluptas doloribus accusamus expedita ab architecto veritatis. Odit quas praesentium a adipisci perspiciatis officia aspernatur dolores illo. Nemo, quasi! Dolore provident asperiores beatae eveniet accusamus, dignissimos fuga quis est corporis. Aliquam voluptas sed voluptatum.</p>
 
                     </div>
+
+                    <div class="icons">
+                        <span> <i class="fas fa-location"></i>Skåne Sverige</span>
+                        <span> <i class="fas fa-user"></i>by admin </span>
+                    </div>
+
                 </div>
+
+                <div id="load-more">Load more</div>
+
             </div>
+            <script>
+                let loadMoreBtn = document.querySelector('#load-more');
+                let currentItem = 2;
+
+                loadMoreBtn.onclick = () =>{
+                    let boxes = [...document.querySelectorAll('#wrapper .unicorn .unicorn-inläg')];
+                    for(var i = currentItem; i < currentItem + 4; i++){
+                        boxes[i].style.display = 'inline-block';
+                    }
+                    currentItem +=4;
+
+                    if(currentItemn >= boxes.length){
+                        loadMoreBtn.style.display = 'none';
+                    }
+                }
+
+
+            </script>
             
         </main>
         <footer>
