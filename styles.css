@@ -13,6 +13,31 @@ body{
   background-color: #666;
 }
 
+h1 {
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 200px 0 22px;
+  text-decoration: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #333333;
+  
+}
+
+h2 {
+  color: #f8f5e6;
+  font-size: 70px;
+  padding-top: 60px;
+  margin: 0 0 0 20px;
+  font-family: 'Corinthia', cursive;
+  
+}
+
+h3 {
+  font-size: 16px;
+  color:#333333;
+
+}
+
 #wrapper {
   width: 100%;
   margin: auto;
@@ -36,16 +61,6 @@ body{
   z-index: 2;
   box-shadow: #333333 0px 1px 5px;
   transition: box-shadaw 0.2s ease;
-}
-
-h1 {
-  font-size: 16px;
-  line-height: 19px;
-  margin: 0 200px 0 22px;
-  text-decoration: none;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #333333;
-  
 }
 
 .topnav a {
@@ -81,14 +96,6 @@ h1 {
   padding-top: 10px;
 }
 
-.välkommen h2 {
-  color: #f8f5e6;
-  font-size: 70px;
-  padding-top: 60px;
-  margin: 0 0 0 20px;
-  font-family: 'Corinthia', cursive;
-  
-}
 
 .välkommen {
   box-shadow: 0px 1px 5px #333333;
@@ -150,14 +157,21 @@ h1 {
   display: inline;  
 }
 
-
-.unicorn-inläg > .unicorn-picture img {
+.unicorn-inläg > .unicorn-picture {
+  margin: 3px;
+  overflow: hidden;
+  width: 250px;
+  height: 190px;
   border-radius: 5px;
-  max-width: 300px;
-  max-height: 200px;
   display: block;
   float: right;
-  padding: 2px ;
+
+}
+
+.unicorn-inläg > .unicorn-picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .unicorn-inläg > .unicorn-heading {
@@ -166,11 +180,6 @@ h1 {
   text-decoration: none;
 }
 
-.unicorn-inläg > .unicorn-heading h3 {
-  font-size: 16px;
-  color:#333333;
-
-}
 
 .unicorn-inläg > .unicorn-description {
   margin: 5px;
@@ -225,6 +234,7 @@ h1 {
   border-radius: 5px;
   border: 1px solid rgb(38 143 255);
   margin: 10px auto;
+
 }
 
 .info-ruta h5, .searchunicorn-form h5 {
@@ -296,7 +306,7 @@ h1 {
 
 .searchunicorn-form {
   background-color: rgba(255,255,255, 0.4);
-  width: 800px;
+  width: 400px;
   min-height: 400px;
   border-radius: 5px;
   border: 1px solid rgb(38 143 255);
@@ -313,33 +323,21 @@ h1 {
   margin-left: 20px;
 }
 
-.searchunicorn-form > form input {
-  width: 20%;
+.searchunicorn-form > form input, textarea, select {
+  width: 70%;
   padding: 10px;
   border: 1px solid rgb(38 143 255);
   border-radius: 5px;
-  margin: 6px 0 10px 20px;
+  margin: 5px 0 5px 20px;
   
 }
 
-.searchunicorn-form > form input:hover {
+.searchunicorn-form > form input[type=submit]:hover {
   background-color: rgb(38 143 255 / 50%);
-  color: #333333;
-}
-
-.spotted-unicorn {
-  width: 990px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: aliceblue;
+  color: #f8f5e6;
 }
 
 #spotted-unicorn-header {
-  width: 990px;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;

@@ -36,11 +36,44 @@
 
                 <main>
                     <div class="searchunicorn-form">
-                        <form action="http...." method="post">
-                            <h5>Vänligen beskriv i textrutan nedan den unicon du sett</h5>
 
-                            <label for="txtcomment">Textruta</label>
-                            <textarea id="txtcomment" name="txtcomment" placeholder="Skriv här.." style="height:200px"></textarea>
+                        <form action="http...." method="post">
+
+                            <h5>Fyll i nedan förmulär för att hitta en Unicorn</h5>
+
+                            <label for="color">Färg</label>
+                            <select>
+                                <option value="green">Grön</option>
+                                <option value="red">Röd</option>
+                                <option value="yellow">Gul</option>
+                                <option value="blue">Blå</option>
+                                <option value="purple">Lila</option>
+                                <option value="glittery">Glittrig</option>
+                                <option value="orange">Orange</option>
+                                <option value="rosa">Rosa</option>
+                                <option value="vindröd">Vinröd</option>
+                                <option value="Pink">Pink</option>
+                                <option value="himmelsblå">Himmelsblå</option>
+                                <option value="turkos">Turkos</option>
+                                <option value="Brun">Brun</option>
+                                <option value="begie">Begie</option>
+                                <option value="grå">Grå</option>
+                            </select>
+
+                            <label for="fa-location">plats</label>
+                            <input type="text" id="location" name="location" placeholder="Mata in plats...">
+
+                            <label for="look">Utseende</label>
+                            <input type="text" id="look" name="look" placeholder="Hur såg hornet ut? Skriv här...">
+
+                            <label for="other-attributes">Övriga attribut?</label>
+                            <input type="text" id="other-attributes" name="other-attributes" placeholder="skriv här...">
+
+                            <label for="behaving">Hur betedde den sig?</label>
+                            <input type="text" id="behaving" name="behaving" placeholder="skriv här...">
+
+                            <label for="txtcomment">Kort beskrivning</label>
+                            <textarea id="txtcomment" name="txtcomment" placeholder="Behövs denna??"></textarea>
 
                             <input type="submit" value="Hitta">
 
