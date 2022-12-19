@@ -1,7 +1,15 @@
-body{
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0;
   box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+body{
   background-color: #666;
 }
 
@@ -67,8 +75,9 @@ h1 {
 
 #wrapper > main {
   grid-area: main;
+  max-width: 990px;
   min-height: calc(80vh - 70px);
-  margin-top: 65px;
+  margin: 65px auto auto auto;
   padding-top: 10px;
 }
 
@@ -84,9 +93,7 @@ h1 {
 .välkommen {
   box-shadow: 0px 1px 5px #333333;
   background-color: rgba(255,255,255, 0.4);
-  width: 1000px;
   height: 350px;
-  margin: auto;
   border-radius: 5px;
 }
 
@@ -120,17 +127,18 @@ h1 {
 }
 
 .unicorn {
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 5px 0;
+  /*
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 5px;
+  */
 }
 
-.unicorn-inläg {
+.unicorn .unicorn-inläg {
   background-color: rgba(255,255,255, 0.4);
-  width: 485px;
-  height: 400px;
+  width: 480px ;
+  height: 400px ;
   border-radius: 5px;
   cursor: pointer;
   margin: 5px;
@@ -138,9 +146,8 @@ h1 {
   display: none;
 }
 
-#wrapper .unicorn .unicorn-inläg:nth-child(1),
-#wrapper .unicorn .unicorn-inläg:nth-child(2){
-  display:inline;
+#wrapper .unicorn .unicorn-inläg:nth-child(-n+4) {
+  display: inline;  
 }
 
 
@@ -159,6 +166,19 @@ h1 {
   text-decoration: none;
 }
 
+.unicorn-inläg > .unicorn-heading h3 {
+  font-size: 16px;
+  color:#333333;
+
+}
+
+.unicorn-inläg > .unicorn-description {
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
 .unicorn-inläg > .icons {
   display: flex;
   align-items: center;
@@ -175,32 +195,17 @@ h1 {
 }
 
 .unicorn-inläg > .icons span i{
-  color: rgb(38 143 255);
-  padding-right: px;
+  color: #333333;
+  padding-right: 5px;
 }
 
-.unicorn-inläg > .unicorn-heading h3, .unicorn-inläg > .unicorn-description p{
-  margin: 0;
-}
-
-.unicorn-inläg > .unicorn-heading h3 {
-  font-size: 16px;
-  color:#333333;
-
-}
-
-.unicorn-inläg > .unicorn-description {
-  margin: 5px;
-  padding: 5px;
-  text-decoration: none;
-  font-size: 12px;
-}
 
 #load-more{
-  margin-top: 10px;
+  margin: 10px;
   display:inline-block;
   padding: 13px 30px;
   border: 1px solid #334;
+  border-radius: 5px;
   color: #334;
   font-size: 16px;
   background-color: #fff;
