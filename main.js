@@ -49,7 +49,7 @@ function postUnicorn() {
 
         $.ajax({
             method: "POST",
-            url: 'http://localhost:5008',
+            url: 'http://localhost:5008/unicorns/search/',
             data: JSON.stringify(data)
         })
         .done(function(result){
@@ -58,6 +58,22 @@ function postUnicorn() {
             let name = result['name']
 
         })
+    }
+}
+
+function postToDB() {
+    return function() {
+        let data = {};
+        //TODO implementera html-sida för att hämta datan
+
+        $.ajax({
+            method: "POST",
+            url: 'http://localhost:5008/v1/unicorns/',
+            data: JSON.stringify(data)
+        })
+        .done(function(result) {
+            //Får vi ens result här?
+        }) 
     }
 }
 
