@@ -43,20 +43,20 @@ function postUnicorn() {
         let data = {};
         data.color = $('#searchUnicorn-form input[name=color]').val()
         data.horn = $('#searchUnicorn-form input[name=horn]').val()
-        data.size = $('#searchUnicorn-form input[name=behaviour]').val()
+        data.behaviour = $('#searchUnicorn-form input[name=behaviour]').val()
         data.lat = $('#searchUnicorn-form input[name=fa-longitude]').val()
         data.long = $('#searchUnicorn-form input[name=fa-latitude]').val()
-        console.log(data)
+
         $.ajax({
             method: "POST",
             url: 'http://localhost:5008',
             data: JSON.stringify(data)
         })
         .done(function(result){
-            let url = result ['image']
+            let image = result ['image']
             let description = result['description']
             let name = result['name']
-            console.log(name)
+
         })
     }
 }
@@ -66,15 +66,42 @@ function getAll() {
         $.ajax({
             url: 'http://localhost:5008/v1/unicorns/'
         })
-        .done(function(data) {
-            for (let i = 0; i < data.length; i++) {
-                console.log(data[i]['id'])
+        .done(function(result) {
+            for (let i = 0; i < result.length; i++) {
+                //TODO UPPDATERA RELEVANT HTML
             }
         });
     }
 }
 
-$("document").ready(function(){
+function getID() {
+    return function() {
+        let id = //TODO HÄMTA ID FRÅN HTML?
+        $.ajax({
+            url: 'http://localhost:5008/v1/unicorns/{' + id + '}'
+        })
+        .done(function(result) {
+            //TODO UPPDATERA RELEVANT HTML
+        })
+    }
+}
+
+function getPictures() {
+    return function() {
+        let id = //TODO HÄMTA ID FRÅN HTML?
+        $.ajax({
+            url: 'http://localhost:5008/v1/pictures/{' + id + '}'
+        })
+        .done(function(result) {
+            let image1 = result['image1']
+            let image2 = result['image2']
+            let image3 = result['image3']
+            //TODO UPPDATERA RELEVANT HTML
+        })
+    }
+}
+
+$("document").ready(function() {
     $('#searchUnicorn-form').submit(postUnicorn());
-    $('#load-more').submit(getAll());
+
  });
