@@ -37,3 +37,44 @@ function() {
     }
 }
 )*/
+
+function postUnicorn() {
+    return function() {
+        let data = {};
+        data.color = $('#searchUnicorn-form input[name=color]').val()
+        data.horn = $('#searchUnicorn-form input[name=horn]').val()
+        data.size = $('#searchUnicorn-form input[name=behaviour]').val()
+        data.lat = $('#searchUnicorn-form input[name=fa-longitude]').val()
+        data.long = $('#searchUnicorn-form input[name=fa-latitude]').val()
+        console.log(data)
+        $.ajax({
+            method: "POST",
+            url: 'http://localhost:5008',
+            data: JSON.stringify(data)
+        })
+        .done(function(result){
+            let url = result ['image']
+            let description = result['description']
+            let name = result['name']
+            console.log(name)
+        })
+    }
+}
+
+function getAll() {
+    return function() {
+        $.ajax({
+            url: 'http://localhost:5008/v1/unicorns/'
+        })
+        .done(function(data) {
+            for (let i = 0; i < data.length; i++) {
+                console.log(data[i]['id'])
+            }
+        });
+    }
+}
+
+$("document").ready(function(){
+    $('#searchUnicorn-form').submit(postUnicorn());
+    $('#load-more').submit(getAll());
+ });
