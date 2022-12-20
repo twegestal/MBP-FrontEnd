@@ -16,7 +16,7 @@ loadMoreBtn.onclick = () =>{
 */
 
 
-var unicorninläg = document.
+/*var unicorninläg = document.
 querySelectorAll('.unicorn-inläg');
 var btn = document.querySelector('#load-more');
 
@@ -36,4 +36,4 @@ function() {
         event.target.style.display='none'
     }
 }
-)
+)*/
