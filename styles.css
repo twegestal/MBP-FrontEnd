@@ -311,11 +311,13 @@ h3 {
   border-radius: 5px;
   border: 1px solid rgb(38 143 255);
   margin: 10px auto;
+  z-index: 2;
 
 }
 
 .searchunicorn-form > form {
   display: grid;
+
   
 }
 
@@ -337,6 +339,7 @@ h3 {
   background-color: rgb(38 143 255 / 50%);
   color: #f8f5e6;
 }
+
 
 #spotted-unicorn-header {
   border-radius: 5px;
