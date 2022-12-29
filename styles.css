@@ -314,10 +314,13 @@ h3 {
 
 }
 
-.searchunicorn-form > form {
-  display: grid;
+#map {
+  height: 400px;
+  width: 400px;
+}
 
-  
+.searchunicorn-form > form {
+  display: grid;  
 }
 
 .searchunicorn-form label {
@@ -428,5 +431,6 @@ h2 {
 
 
 }
+
 
 }
