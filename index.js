@@ -7,10 +7,6 @@ $(document).ready(function() {
             appendAll(result[i]['id'])
         }
     })
-
-
-  
-
 })
 
 
@@ -23,8 +19,6 @@ function appendPost(i) {
        $('#postDesc').html(result['description'])
 
     })
-    
-
 }
 
 function appendAll(i) {
@@ -40,11 +34,7 @@ function appendAll(i) {
         img.setAttribute('src', result['image'])
         kids[3].childNodes[1].innerHTML = result['name']
         kids[5].childNodes[1].innerHTML = result['description']
-        
-         
-       //$('#postImg').attr('src', result['image'])
-       //$('#postName').html(result['name'])
-       //$('#postDesc').html(result['description'])
+    
 
     })
     destination.appendChild(evilclone);
