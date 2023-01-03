@@ -59,13 +59,13 @@ function postUnicorn() {
     return function() {
         var spinner = '<div class="spinner-border" role="status"><span class="visually-hidden"></span></div>'
         $('#submit').html(spinner);
-        console.log(oldMarker)
         let data = {};
         let spottedWhere = {};
-        data.color = $('#searchUnicorn-form input[name=color]').val()
+        data.color = $('#selector').find(':selected').val()
         data.horn = $('#searchUnicorn-form input[name=horn]').val()
-        data.behaviour = $('#searchUnicorn-form input[name=behaviour]').val()
-        data.reportedBy = $('#searchUnicorn-form input[name=reportedBy]').val() //en till inputruta i html;
+        data.horn = $('#horn').val()
+        data.behaviour = $('#behaviour').val()
+        data.reportedBy = $('#reportedBy').val() //en till inputruta i html;
         data.spottedWhen = $('.date').val() + ' 00:00:00' //kalender funktion;
         spottedWhere.name = locationName
         spottedWhere.lat = oldMarker.getPosition().lat()
@@ -78,7 +78,7 @@ function postUnicorn() {
             data: JSON.stringify(data)
         })
         .done(function(result){
-            console.log('result')
+            console.log(result['reportedBy'])
             localStorage.setItem('result', result)
             localStorage.setItem('image', result['image'])
             localStorage.setItem('name', result['name'])
@@ -95,6 +95,5 @@ function postUnicorn() {
     }
 }
 $("document").ready(function() {
-
     $('#submit').click(postUnicorn());
  });

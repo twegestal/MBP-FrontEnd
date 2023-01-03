@@ -2,8 +2,9 @@ $(document).ready(function() {
     $('#imageResult').attr('src', localStorage.getItem('image'))
     $('#unicornNameSearch').html(localStorage.getItem('name'))
     $('#searchDesc').html(localStorage.getItem('desc'))
-    $('.fas fa-location').html(localStorage.getItem('whereName'))
-    $('.fas fa-user').html(localStorage.getItem('reportedBy'))
+    $('#location').html(localStorage.getItem('whereName'))
+    $('#byWho').html(localStorage.getItem('reportedBy'))
+    console.log(localStorage.getItem('reportedBy'))
     $('#addUnicorn').click(addToDatabase())
 })
 

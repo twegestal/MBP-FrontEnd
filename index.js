@@ -10,7 +10,6 @@ $(document).ready(function() {
     })
 })
 
-
 function appendPost(i) {
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/' + i
@@ -18,7 +17,8 @@ function appendPost(i) {
        $('#postImg').attr('src', result['image'])
        $('#postName').html(result['name'])
        $('#postDesc').html(result['description'])
-
+       $('#postBy').html(result['reportedBy'])
+       $('#postLoc').html(result['spottedWhere']['name'])
     })
 }
 
@@ -35,8 +35,8 @@ function appendAll(i) {
         img.setAttribute('src', result['image'])
         kids[3].childNodes[1].innerHTML = result['name']
         kids[5].childNodes[1].innerHTML = result['description']
-    
-
+        kids[7].childNodes[1].innerHTML = result['spottedWhere']['name']
+        kids[7].childNodes[3].innerHTML = result['reportedBy']
     })
     destination.appendChild(evilclone);
 }
