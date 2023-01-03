@@ -57,6 +57,8 @@ function initMap() {
 
 function postUnicorn() {
     return function() {
+        var spinner = '<div class="spinner-border" role="status"><span class="visually-hidden"></span></div>'
+        $('#submit').html(spinner);
         console.log(oldMarker)
         let data = {};
         let spottedWhere = {};
@@ -86,6 +88,7 @@ function postUnicorn() {
             localStorage.setItem('lat', result['spottedWhere']['lat'])
             localStorage.setItem('reportedBy', result['reportedBy'])
             localStorage.setItem('spottedWhen', result['spottedWhen'])
+            $('#submit').text('Hitta')
             document.location = 'pattern.html'
         })
         

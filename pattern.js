@@ -25,7 +25,9 @@ function addToDatabase() {
             url: 'http://localhost:5008/v1/unicorns',
             data: JSON.stringify(data)
         }).done(function(){
+            localStorage.clear()
             document.location = 'index.html'
         })
+
     }
 }
