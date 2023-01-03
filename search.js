@@ -77,10 +77,16 @@ function postUnicorn() {
         })
         .done(function(result){
             console.log('result')
+            localStorage.setItem('result', result)
             localStorage.setItem('image', result['image'])
             localStorage.setItem('name', result['name'])
             localStorage.setItem('desc', result['description'])
-            //document.location = 'pattern.html'
+            localStorage.setItem('whereName', result['spottedWhere']['name'])
+            localStorage.setItem('lon', result['spottedWhere']['lon'])
+            localStorage.setItem('lat', result['spottedWhere']['lat'])
+            localStorage.setItem('reportedBy', result['reportedBy'])
+            localStorage.setItem('spottedWhen', result['spottedWhen'])
+            document.location = 'pattern.html'
         })
         
     }

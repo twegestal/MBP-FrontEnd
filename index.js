@@ -2,8 +2,9 @@ $(document).ready(function() {
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/'
     }).done(function(result) {
-        appendPost(result[0]['id'])
-        for (let i = 1; i < result.length; i++) {
+        appendPost(result[result.length-1]['id'])
+        let min = Math.max(result.length-4, 0)
+        for (let i = result.length-2; i >= min; i--) {
             appendAll(result[i]['id'])
         }
     })
