@@ -65,8 +65,8 @@ function postUnicorn() {
         data.color = $('#searchUnicorn-form input[name=color]').val()
         data.horn = $('#searchUnicorn-form input[name=horn]').val()
         data.behaviour = $('#searchUnicorn-form input[name=behaviour]').val()
-        data.reportedBy = 'Luke' //en till inputruta i html;
-        data.spottedWhen = '2022-01-01 00:00:00' //kalender funktion;
+        data.reportedBy = $('#searchUnicorn-form input[name=reportedBy]').val() //en till inputruta i html;
+        data.spottedWhen = $('.date').val() + ' 00:00:00' //kalender funktion;
         spottedWhere.name = locationName
         spottedWhere.lat = oldMarker.getPosition().lat()
         spottedWhere.lon = oldMarker.getPosition().lng()
@@ -95,5 +95,6 @@ function postUnicorn() {
     }
 }
 $("document").ready(function() {
+
     $('#submit').click(postUnicorn());
  });
