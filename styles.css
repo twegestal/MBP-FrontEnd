@@ -97,14 +97,14 @@ h3 {
 }
 
 
-.välkommen {
+#wrapper > main .välkommen {
   box-shadow: 0px 1px 5px #333333;
   background-color: rgba(255,255,255, 0.4);
   height: 350px;
   border-radius: 5px;
 }
 
-.välkommen p {
+#wrapper > main .välkommen p {
   color: #f8f5e6;
   margin: 10px 0 0 20px;
   font-family: 'Corinthia', cursive;
@@ -112,7 +112,7 @@ h3 {
 
 }
 
-.välkommen button {
+#wrapper > main .välkommen button {
   color: #f8f5e6;
   background-color: #666;
   text-decoration: none;
@@ -126,14 +126,14 @@ h3 {
 
 }
 
-.välkommen button:hover {
+#wrapper > main .välkommen button:hover {
   background-color: #ddd;
   color: black;
   border-radius: 10px;
 
 }
 
-.unicorn {
+#wrapper > main .unicorn {
   margin: 5px 0;
   /*
   display: grid;
@@ -142,7 +142,7 @@ h3 {
   */
 }
 
-.unicorn .unicorn-inläg {
+#wrapper > main .unicorn .unicorn-inläg {
   background-color: rgba(255,255,255, 0.4);
   width: 480px ;
   height: 400px ;
@@ -325,7 +325,7 @@ h3 {
   font-size: 13px;
 }
 
-.searchunicorn-form > form input, textarea, select {
+.searchunicorn-form > form input, select, button {
   width: 70%;
   padding: 10px;
   border: 1px solid rgb(38 143 255);
@@ -334,11 +334,30 @@ h3 {
   
 }
 
-.searchunicorn-form > form input[type=button]:hover {
+.searchunicorn-form > form button:hover {
   background-color: rgb(38 143 255 / 50%);
   color: #f8f5e6;
 }
 
+.overlay{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: rgba(225, 225, 225, 0.8);
+  
+}
+
+body.loading{
+  overflow: hidden;
+}
+
+body.loading .overlay{
+  display: block;
+}
 
 #spotted-unicorn-header {
   border-radius: 5px;
