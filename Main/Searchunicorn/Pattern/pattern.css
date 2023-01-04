@@ -64,14 +64,14 @@
     margin: 20px 15px;
 }
 
-.container .container-box #add-button input{
+.container .container-box #add-button button{
     margin-top: 20px;
     padding: 14px 23px;
     border-radius: 5px;
     border: 1px solid rgb(38 143 255);
 }
 
-.container .container-box #add-button input:hover{
+.container .container-box #add-button button:hover{
     background-color: rgb(38 143 255 / 30%);
     color: #333333;
     border: none;
