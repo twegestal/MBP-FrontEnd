@@ -1,11 +1,17 @@
+#wrapper main #searchunicorn-container{
+    
+}
+
 #wrapper main .searchunicorn-form{
     display: grid;
-    background-color: rgba(255,255,255, 0.4);
     width: 400px;
-    min-height: 400px;
+    height: 400px; 
+    background-color: rgba(255,255,255, 0.4);
     border-radius: 5px;
     border: 1px solid rgb(38 143 255);
-    margin: 10px auto;
+    float: left;
+    margin: 5px;
+
 }
 
 #wrapper main .searchunicorn-form label{
@@ -34,4 +40,7 @@
 #map {
     height: 400px;
     width: 400px;
+    border-radius: 5px;
+    border: 1px solid rgb(38 143 255);
+    margin: 12px 5px;
   }
