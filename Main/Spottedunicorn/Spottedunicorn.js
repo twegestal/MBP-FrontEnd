@@ -55,7 +55,7 @@ function addTemplate(i) {
         let template = `
         <div class="unicorn-container-box">
             <div class="unicorn-picture">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/404UnicornNotFound.svg" alt="Image not found">
+                <img src="" alt="Image not found">
             </div>
             <div class="unicorn-heading">
                 <h3>Unicorn not found</h3>
