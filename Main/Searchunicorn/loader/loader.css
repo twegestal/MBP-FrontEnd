@@ -1,7 +1,7 @@
 .center{
     margin: 0;
     padding: 0;
-    background: rgb(0, 0, 0, .5);
+    background: rgb(0, 0, 0, .2);
     display: flex;
     text-align: center;
     justify-content: center;

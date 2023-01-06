@@ -29,7 +29,7 @@ function addToDatabase() {
             data: JSON.stringify(data)
         }).done(function(){
             localStorage.clear()
-            document.location = 'index.html'
+            document.location = '/Main/index.html'
         })
 
     }

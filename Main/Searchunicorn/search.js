@@ -1,5 +1,6 @@
 var oldMarker
 var locationName
+const loaderCode = '<div class="center"><div class="ring"></div><span>Letar...</span></div>'
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
@@ -57,8 +58,9 @@ function initMap() {
 
 function postUnicorn() {
     return function() {
-        var spinner = '<div class="spinner-border" role="status"><span class="visually-hidden"></span></div>'
-        $('#submit').html(spinner);
+        
+        //var spinner = '<div class="spinner-border" role="status"><span class="visually-hidden"></span></div>'
+        //$('#submit').html(spinner);
         let data = {};
         let spottedWhere = {};
         data.color = $('#selector').find(':selected').val()
@@ -71,7 +73,7 @@ function postUnicorn() {
         spottedWhere.lat = oldMarker.getPosition().lat()
         spottedWhere.lon = oldMarker.getPosition().lng()
         data.spottedWhere = spottedWhere 
-
+        $('#wrapper').html(loaderCode)
         $.ajax({
             method: "POST",
             url: 'http://localhost:5008/v1/unicorns/search/',
@@ -89,7 +91,7 @@ function postUnicorn() {
             localStorage.setItem('reportedBy', result['reportedBy'])
             localStorage.setItem('spottedWhen', result['spottedWhen'])
             $('#submit').text('Hitta')
-            document.location = 'pattern.html'
+            document.location = '/Main/Searchunicorn/Pattern/pattern.html'
         })
         
     }
