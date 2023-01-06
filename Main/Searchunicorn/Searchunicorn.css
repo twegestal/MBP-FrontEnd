@@ -1,0 +1,42 @@
+#wrapper main .searchunicorn-form{
+    display: grid;
+    width: 400px;
+    height: 400px; 
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 5px;
+    border: 1px solid rgb(38 143 255);
+    float: left;
+    margin: 5px;
+
+}
+
+#wrapper main .searchunicorn-form label{
+    margin: 5px;
+    font-size: 14px;
+}
+
+#wrapper main .searchunicorn-form, select, input{
+    padding: 10px;
+    border: 1px solid rgb(38 143 255);
+    border-radius: 5px;
+}
+
+#wrapper main .searchunicorn-form button{
+    padding: 10px;
+    border: 1px solid rgb(38 143 255);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#wrapper main .searchunicorn-form button:hover{
+    background-color: rgb(38 143 255 / 50%);
+    color: #f8f5e6;
+}
+
+#map {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid rgb(38 143 255);
+    margin: 12px 5px;
+}

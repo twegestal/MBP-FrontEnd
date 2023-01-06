@@ -1,0 +1,40 @@
+#wrapper main .news-container{
+    background-color: rgba(255,255,255, 0.4);
+    width: 500px;
+    min-height: 300px;
+    border-radius: 5px;
+    border: 1px solid rgb(38 143 255);
+    margin: 10px auto;
+}
+
+#wrapper main .news-container h5{
+    font-size: 20px;
+    text-decoration: none;
+    margin: 20px;
+    padding-top: 30px;
+}
+
+#wrapper main .news-container p{
+    margin: 20px;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+#wrapper main .news-container button{
+    color: #f8f5e6;
+    background-color: rgb(38 143 255);
+    text-decoration: none;
+    text-align: center;
+    margin: 30px 0 0 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#wrapper main .news-container button:hover{
+    background-color: rgb(38 143 255 / 50%);
+    color: black;
+    border-radius: 10px;
+}
