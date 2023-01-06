@@ -16,7 +16,7 @@ $('document').ready(function() {
 function loadMoreUnicorns() {
     return function() {
         let max = Math.max(index-4, 0)
-        for(; index >= max; index--) {
+        for(; index > max; index--) {
             addTemplate(list[index]['id'])
         }
     }
@@ -27,7 +27,7 @@ function addTemplate(i) {
         url: 'http://localhost:5008/v1/unicorns/' + i
     }).done(function(result) {
         let template = `
-        <div class="unicorn-container-box" style="display: block;>
+        <div id="${result['id']}"class="unicorn-container-box">
             <div class="unicorn-picture">
                 <img src="${result['image']}" alt="Image not found">
             </div>
@@ -44,6 +44,14 @@ function addTemplate(i) {
             </div>
         </div>`
         $('#unicorn-container').append(template)
-        
+        let ID = '#' + result['id']
+        $(ID).click(openSpecific(result['id']))
     })
 } 
+
+function openSpecific(id) {
+    return function() {
+        localStorage.setItem('specificID', id)
+        document.location = '/Main/Spottedunicorn/Specificunicorn/specificUnicorn.html'
+    }
+}

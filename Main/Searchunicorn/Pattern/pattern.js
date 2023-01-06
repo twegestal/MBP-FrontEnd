@@ -4,7 +4,6 @@ $(document).ready(function() {
     $('#searchDesc').html(localStorage.getItem('desc'))
     $('#location').html(localStorage.getItem('whereName'))
     $('#byWho').html(localStorage.getItem('reportedBy'))
-    console.log(localStorage.getItem('reportedBy'))
     $('#addUnicorn').click(addToDatabase())
 })
 
