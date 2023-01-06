@@ -1,21 +1,49 @@
-var unicorninläg = document.
-querySelectorAll('.unicorn-container-box');
-var btn = document.querySelector('#load-more');
+var list
+var index
+$('document').ready(function() {
+    $('#load-more').click(loadMoreUnicorns())
+    $.ajax({
+        url: 'http://localhost:5008/v1/unicorns/'
+    }).done(function(result) {
+        list = result;
+        let max = Math.max(result.length-4, 0)
+        for (index = result.length-1; index >= max; index--) {
+            addTemplate(result[index]['id'])
+        }
+    })
+})
 
-var currentunicorn = 4
-btn.addEventListener('click',
-function() {
-    for (var i = currentunicorn; i <
-    currentunicorn + 4; i++) {
-        if(unicorninläg[i]) {
-            unicorninläg[i].style.display = 'block';
-
+function loadMoreUnicorns() {
+    return function() {
+        let max = Math.max(index-4, 0)
+        for(; index >= max; index--) {
+            addTemplate(list[index]['id'])
         }
     }
-
-    currentunicorn += 4;
-    if(currentunicorn >= unicorninläg.length){
-        event.target.style.display='none'
-    }
 }
-)
+
+function addTemplate(i) {
+    $.ajax({
+        url: 'http://localhost:5008/v1/unicorns/' + i
+    }).done(function(result) {
+        let template = `
+        <div class="unicorn-container-box" style="display: block;>
+            <div class="unicorn-picture">
+                <img src="${result['image']}" alt="Image not found">
+            </div>
+            <div class="unicorn-heading">
+                <h3>${result['name']}</h3>
+            </div>
+            <div class="unicorn-description">
+                <p>${result['description']}</p>
+
+            </div>
+            <div class="icons">
+                <span> <i class="fas fa-location"></i>${result['spottedWhere']['name']}</span>
+                <span> <i class="fas fa-user"></i>${result['reportedBy']}</span>
+            </div>
+        </div>`
+        $('#unicorn-container').append(template)
+        
+    })
+} 

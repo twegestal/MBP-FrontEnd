@@ -58,43 +58,69 @@ function initMap() {
 
 function postUnicorn() {
     return function() {
+        if (validInput()) {
+            let data = {};
+            let spottedWhere = {};
+            data.color = $('#selector').find(':selected').val()
+            data.horn = $('#horn').val()
+            data.behaviour = $('#behaviour').val()
+            data.reportedBy = $('#reportedBy').val() 
+            data.spottedWhen = $('.date').val() + ' 00:00:00' 
+            spottedWhere.name = locationName
+            spottedWhere.lat = oldMarker.getPosition().lat()
+            spottedWhere.lon = oldMarker.getPosition().lng()
+            data.spottedWhere = spottedWhere 
+            $('#wrapper').html(loaderCode)
+            $.ajax({
+                method: "POST",
+                url: 'http://localhost:5008/v1/unicorns/search/',
+                data: JSON.stringify(data)
+            })
+            .done(function(result){
+                localStorage.setItem('result', result)
+                localStorage.setItem('image', result['image'])
+                localStorage.setItem('name', result['name'])
+                localStorage.setItem('desc', result['description'])
+                localStorage.setItem('whereName', result['spottedWhere']['name'])
+                localStorage.setItem('lon', result['spottedWhere']['lon'])
+                localStorage.setItem('lat', result['spottedWhere']['lat'])
+                localStorage.setItem('reportedBy', result['reportedBy'])
+                localStorage.setItem('spottedWhen', result['spottedWhen'])
+                document.location = '/Main/Searchunicorn/Pattern/pattern.html'
+            })
         
-        //var spinner = '<div class="spinner-border" role="status"><span class="visually-hidden"></span></div>'
-        //$('#submit').html(spinner);
-        let data = {};
-        let spottedWhere = {};
-        data.color = $('#selector').find(':selected').val()
-        data.horn = $('#searchUnicorn-form input[name=horn]').val()
-        data.horn = $('#horn').val()
-        data.behaviour = $('#behaviour').val()
-        data.reportedBy = $('#reportedBy').val() //en till inputruta i html;
-        data.spottedWhen = $('.date').val() + ' 00:00:00' //kalender funktion;
-        spottedWhere.name = locationName
-        spottedWhere.lat = oldMarker.getPosition().lat()
-        spottedWhere.lon = oldMarker.getPosition().lng()
-        data.spottedWhere = spottedWhere 
-        $('#wrapper').html(loaderCode)
-        $.ajax({
-            method: "POST",
-            url: 'http://localhost:5008/v1/unicorns/search/',
-            data: JSON.stringify(data)
-        })
-        .done(function(result){
-            console.log(result['reportedBy'])
-            localStorage.setItem('result', result)
-            localStorage.setItem('image', result['image'])
-            localStorage.setItem('name', result['name'])
-            localStorage.setItem('desc', result['description'])
-            localStorage.setItem('whereName', result['spottedWhere']['name'])
-            localStorage.setItem('lon', result['spottedWhere']['lon'])
-            localStorage.setItem('lat', result['spottedWhere']['lat'])
-            localStorage.setItem('reportedBy', result['reportedBy'])
-            localStorage.setItem('spottedWhen', result['spottedWhen'])
-            $('#submit').text('Hitta')
-            document.location = '/Main/Searchunicorn/Pattern/pattern.html'
-        })
+        } 
+    }
+}
+
+function validInput() {
+    let ok = true;
+    if (!$('#horn').val()) {
+        $('#horn').css('borderColor', '#D0342C')
+        ok = false
+    }
+    if (!($('#behaviour').val())) {
+        $('#behaviour').css('borderColor', '#D0342C')
+        ok = false
+    }
+    if (!($('#behaviour').val())) {
+        $('#behaviour').css('borderColor', '#D0342C')
+        ok = false
+    }
+    if (!($('#reportedBy').val())) {
+        $('#reportedBy').css('borderColor', '#D0342C')
+        ok = false
+    }
+    if (!($('.date').val())) {
+        $('.date').css('borderColor', '#D0342C')
+        ok = false
+    }
+    if (oldMarker == undefined) {
+        $('#map').css('border', '3px #D0342C solid')
         
     }
+    return ok
+    
 }
 $("document").ready(function() {
     $('#submit').click(postUnicorn());
