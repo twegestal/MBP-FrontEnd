@@ -10,6 +10,11 @@ $('document').ready(function() {
         for (index = result.length-1; index >= max; index--) {
             addTemplate(result[index]['id'])
         }
+    }).fail(function(jqXHR, textStatus, error){
+        let template = `
+            <h2>Looks like there are no unicorns here </h2>
+        `
+        $('#unicorn-container').append(template)
     })
 })
 
@@ -46,6 +51,25 @@ function addTemplate(i) {
         $('#unicorn-container').append(template)
         let ID = '#' + result['id']
         $(ID).click(openSpecific(result['id']))
+    }).fail(function(jqXHR, textStatus, error){
+        let template = `
+        <div class="unicorn-container-box">
+            <div class="unicorn-picture">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/404UnicornNotFound.svg" alt="Image not found">
+            </div>
+            <div class="unicorn-heading">
+                <h3>Unicorn not found</h3>
+            </div>
+            <div class="unicorn-description">
+                <p>Looks like there's nothing here</p>
+
+            </div>
+            <div class="icons">
+                <span> <i class="fas fa-location"></i>Unknown</span>
+                <span> <i class="fas fa-user"></i>Unknown</span>
+            </div>
+        </div>`
+        $('#unicorn-container').append(template)
     })
 } 
 

@@ -21,15 +21,19 @@ function addToDatabase() {
         data['spottedWhere'] = spottedWhere
         data['reportedBy'] = localStorage.getItem('reportedBy')
         data['spottedWhen'] = localStorage.getItem('spottedWhen')
-
+        localStorage.clear()
         $.ajax({
             method: 'POST',
             url: 'http://localhost:5008/v1/unicorns',
             data: JSON.stringify(data)
-        }).done(function(){
-            localStorage.clear()
+        }).done(function() {
             document.location = '/Main/index.html'
+        }).fail(function(jqXHR, textStatus, error) {
+            if (error) {
+                alert(error)
+            } else {
+                alert('Internal Server Error')
+            }
         })
-
     }
 }

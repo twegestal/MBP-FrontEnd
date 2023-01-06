@@ -75,8 +75,7 @@ function postUnicorn() {
                 method: "POST",
                 url: 'http://localhost:5008/v1/unicorns/search/',
                 data: JSON.stringify(data)
-            })
-            .done(function(result){
+            }).done(function(result){
                 localStorage.setItem('result', result)
                 localStorage.setItem('image', result['image'])
                 localStorage.setItem('name', result['name'])
@@ -87,6 +86,10 @@ function postUnicorn() {
                 localStorage.setItem('reportedBy', result['reportedBy'])
                 localStorage.setItem('spottedWhen', result['spottedWhen'])
                 document.location = '/Main/Searchunicorn/Pattern/pattern.html'
+            }).fail(function(jqXHR, textStatus, error){
+                localStorage.setItem('errorMessage', error)
+                document.location = '/Main/Error/error.html'
+            
             })
         
         } 
