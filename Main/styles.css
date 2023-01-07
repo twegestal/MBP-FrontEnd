@@ -1,5 +1,5 @@
 *{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Signika Negative', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,7 +30,7 @@ h1 {
   line-height: 19px;
   margin: 0 200px 0 22px;
   text-decoration: none;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:'Signika Negative','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #333333;
   
 }
@@ -40,7 +40,7 @@ h2 {
   font-size: 70px;
   padding-top: 60px;
   margin: 0 0 0 20px;
-  font-family: 'Corinthia', cursive;
+  font-family: 'Signika Negative', 'Corinthia', cursive;
   
 }
 
@@ -68,7 +68,7 @@ h3 {
   position: fixed;
   display: flex;
   align-items: center;
-  background-color: #666;
+  background-color: rgba(123, 123, 123, 0.551);
   width: 100%;
   z-index: 2;
   box-shadow: #333333 0px 1px 5px;
