@@ -70,7 +70,7 @@ function postUnicorn() {
             spottedWhere.lat = oldMarker.getPosition().lat()
             spottedWhere.lon = oldMarker.getPosition().lng()
             data.spottedWhere = spottedWhere 
-            $('#wrapper').html(loaderCode)
+            $('#wrapper').append(loaderCode)
             $.ajax({
                 method: "POST",
                 url: 'http://localhost:5008/v1/unicorns/search/',
