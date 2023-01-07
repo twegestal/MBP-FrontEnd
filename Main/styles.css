@@ -74,7 +74,7 @@ h4 {
   position: fixed;
   display: flex;
   align-items: center;
-  background-color: rgba(123, 123, 123, 0.551);
+  background-color: rgba(123, 123, 123, 0.722);
   width: 100%;
   z-index: 2;
   box-shadow: #333333 0px 1px 5px;
@@ -143,6 +143,7 @@ h4 {
   width: 120px;
   height: 80px;
   text-align:center;
+  font-size: 18px;
   background: url("/Main/cloud-btn.svg");
   background-size:contain;
   background-repeat: no-repeat;

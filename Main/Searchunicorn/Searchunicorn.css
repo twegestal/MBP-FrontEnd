@@ -7,25 +7,31 @@
     border: 1px solid rgb(38 143 255);
     float: left;
     margin: 5px;
-
-}
-
-#wrapper main .searchunicorn-form label{
-    margin: 5px;
-    font-size: 14px;
-}
-
-#wrapper main .searchunicorn-form, select, input{
+    font-size: 22px;
     padding: 10px;
+}
+
+#wrapper main .searchunicorn-form > label{
+    margin: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#wrapper main .searchunicorn-form > select, input{
+    padding: 5px;
     border: 1px solid rgb(38 143 255);
     border-radius: 5px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.64);
+    font-size: 15px;
 }
 
 #wrapper main .searchunicorn-form button{
     padding: 10px;
     border: 1px solid rgb(38 143 255);
-    border-radius: 5px;
+    border-radius: 30px;
     margin: 5px;
+    background-color: rgba(255, 255, 255, 0.46);
 }
 
 #wrapper main .searchunicorn-form button:hover{
