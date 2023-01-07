@@ -15,9 +15,12 @@ $('document').ready(function() {
         url: 'http://localhost:5008/v1/unicorns/'
     }).done(function(result) {
         list = result;
-        let max = Math.max(result.length-4, 0)
-        for (index = result.length-1; index >= max; index--) {
+        let max = Math.max(result.length-5, 0)
+        for (index = result.length-1; index > max; index--) {
             addTemplate(result[index]['id'])
+        }
+        if (index === 0) {
+            $('#load-more').remove()
         }
     }).fail(function(jqXHR, textStatus, error){
         let template = `
@@ -35,6 +38,9 @@ function loadMoreUnicorns() {
         let max = Math.max(index-4, 0)
         for(; index > max; index--) {
             addTemplate(list[index]['id'])
+        }
+        if (index === 0) {
+            $('#load-more').remove()
         }
     }
 }
