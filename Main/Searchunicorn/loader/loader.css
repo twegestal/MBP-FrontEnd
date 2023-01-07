@@ -25,17 +25,17 @@
 
     0%{
         transform: rotate(0deg);
-        box-shadow: 1px 5px 2px #333333;
+        box-shadow: 1px 5px 2px #37eb00;
     }
 
     50%{
         transform: rotate(180deg);
-        box-shadow: 1px 5px 2px #e65c00;
+        box-shadow: 1px 5px 2px #e600a9;
     }
 
     100%{
         transform: rotate(360deg);
-        box-shadow: 1px 5px 2px #0456c8;
+        box-shadow: 1px 5px 2px #04e4f4;
     }
 
 }
@@ -52,7 +52,7 @@
 }
 
 .center span{
-    color: #000000;
+    color: #ffffff;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
