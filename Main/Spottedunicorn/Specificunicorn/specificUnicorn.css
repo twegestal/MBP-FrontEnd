@@ -4,7 +4,13 @@
     min-height: 450px;
     border-radius: 5px;
     margin-bottom: 7px;
-      
+    display: grid;
+}
+
+.imageResult {
+    width: 256px;
+    height: 256px;
+    padding: 20px;
 }
 
 .container .container-heading{

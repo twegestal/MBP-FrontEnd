@@ -1,4 +1,5 @@
 var id
+const loaderCode = '<div class="center"><div class="ring"></div><span>Letar...</span></div>'
 $('document').ready(function() {
     id = localStorage.getItem('specificID')
     localStorage.clear
@@ -26,17 +27,26 @@ function buildHTML() {
 
 function getMorePictures() {
     return function() {
+        $('#wrapper').append(loaderCode)
         $.ajax({
             url: 'http://localhost:5008/v1/unicorns/pictures/' + id
         }).done(function(result) {
-            $('#cont').html('<img src="' + result[0]['url'] + '" id="imageResult" alt="Bild hittades inte">')
-            $('#cont').html('<img src="' + result[1]['url'] + '" id="imageResult" alt="Bild hittades inte">')
+            $('.center').remove()
+            let template = `
+            <div class="container-box">
+                <img src="${result[0]['url']}" class="imageResult" alt="Bild hittades inte">
+                <img src="${result[1]['url']}" class="imageResult" alt="Bild hittades inte">
+            </div>
+            `
+            $('#cont').append(template)
         }).fail(function(jqXHR, textStatus, error) {
+            $('.center').remove()
             if (error) {
                 alert(error)
             } else {
                 alert('Internal Server Error')
             }
         })
+        
     }
 }

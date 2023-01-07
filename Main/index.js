@@ -19,7 +19,7 @@ function appendAll(i) {
         url: 'http://localhost:5008/v1/unicorns/' + i
     }).done(function(result) {
         let template = `
-        <div class="unicornPost">
+        <div id="${result['id']}"class="unicornPost">
             <div class="unicorn-picture">
                 <img src="${result['image']}" alt="unicorn">
             </div>
@@ -35,6 +35,8 @@ function appendAll(i) {
             </div>
         </div>`
         $('#unicorn').append(template)
+        let ID = '#' + result['id']
+        $(ID).click(openSpecific(result['id']))
     }).fail(function(jqXHR, textStatus, error){
         let template = `
         <div class="unicorn-container-box">
@@ -56,4 +58,9 @@ function appendAll(i) {
         $('#unicorn').append(template)
     })
 }
-
+function openSpecific(id) {
+    return function() {
+        localStorage.setItem('specificID', id)
+        document.location = '/Main/Spottedunicorn/Specificunicorn/specificUnicorn.html'
+    }
+}
