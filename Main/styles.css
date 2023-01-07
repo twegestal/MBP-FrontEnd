@@ -112,6 +112,18 @@ h4 {
   top: 20px;
   right: 35px;
   width: 38px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.cross-icon{
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  width: 34px;
+  cursor: pointer;
+  z-index: 999;
 }
 
 #wrapper > main {
