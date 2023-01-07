@@ -4,6 +4,14 @@
     gap: 5px;
 }
 
+.unicorn-container-box:hover {
+    -webkit-box-shadow: 0px 0px 100px 0px rgb(255, 0, 153);
+    -moz-box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
+    box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
+    transition: .8s ease;
+
+}
+
 #wrapper main #unicorn-container .unicorn-container-box{
     background-color: rgba(255,255,255, 0.4);
     height: 400px ;

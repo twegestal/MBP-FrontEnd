@@ -1,5 +1,11 @@
-var list
-var index
+var list //the list of unicorns
+var index //keeps track of shown unicorns
+
+/**
+ * Makes an API call and fetches the full list of unicorns.
+ * Fills the page with the last four unicorns in the list.
+ * Adds eventlisteners for loadmore button.
+ */
 $('document').ready(function() {
     $('#load-more').click(loadMoreUnicorns())
     $.ajax({
@@ -17,7 +23,9 @@ $('document').ready(function() {
         $('#unicorn-container').append(template)
     })
 })
-
+/**
+ * Adds four more unicorns to the html page. 
+ */
 function loadMoreUnicorns() {
     return function() {
         let max = Math.max(index-4, 0)
@@ -27,6 +35,10 @@ function loadMoreUnicorns() {
     }
 }
 
+/**
+ * Fetches one unicorn from the database and adds it to the html page.
+ * @param {*} i The id for the unicorn to be fetched from the API and added to the html page
+ */
 function addTemplate(i) {
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/' + i
@@ -72,7 +84,10 @@ function addTemplate(i) {
         $('#unicorn-container').append(template)
     })
 } 
-
+/**
+ * Called when a unicorn div is pressed, adds the current id to localstorage and redirects to specificUnicorn.html
+ * @param {*} id Integer representing the id of the pressed div on the page
+ */
 function openSpecific(id) {
     return function() {
         localStorage.setItem('specificID', id)

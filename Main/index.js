@@ -1,3 +1,6 @@
+/**
+ * Fetches a list of the four last unicorns and adds eventlisteners.
+ */
 $(document).ready(function() {
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/'
@@ -13,7 +16,10 @@ $(document).ready(function() {
         $('#unicorn-container').append(template)
     })
 })
-
+/**
+ * Fetches a specific unicorn and builds a html element with its information
+ * @param {*} i Integer representing the specific id
+ */
 function appendAll(i) {
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/' + i
@@ -58,6 +64,10 @@ function appendAll(i) {
         $('#unicorn').append(template)
     })
 }
+/**
+ * Called when a unicorn div is pressed, adds the current id to localstorage and redirects to specificUnicorn.html
+ * @param {*} id Integer representing the id of the pressed div on the page
+ */
 function openSpecific(id) {
     return function() {
         localStorage.setItem('specificID', id)

@@ -20,13 +20,13 @@
     <body>
         <div id="wrapper">
             <header>
-                <h1>Mythical Beast Profiler</h1>
+                <img src="/Main/MBP-logo.svg">
                 <div class="topnav">
-                    <a href="/Main/index.html">Home</a>
-                    <a href="/Main/News/news.html">News</a>
-                    <a href="/Main/Contact/contact.html">Contact</a>
-                    <a href="/Main/Searchunicorn/searchUnicorn.html">Search Unicorn</a>
-                    <a href="/Main/Spottedunicorn/spottedUnicorn.html">Spotted Unicorns</a>
+                    <a href="/Main/index.html">Start</a>
+                    <a href="/Main/News/news.html">Nyheter</a>
+                    <a href="/Main/Contact/contact.html">Kontakt</a>
+                    <a href="/Main/Searchunicorn/searchUnicorn.html">Sök enhörning</a>
+                    <a href="/Main/Spottedunicorn/spottedUnicorn.html">Upptäckta enhörningar</a>
                     <a class="social" href="https://www.instagram.com/mythicalbeastprofiler/" target="_blank">
                         <ion-icon class="instagram" name="logo-instagram"></ion-icon>
                     </a>
@@ -42,46 +42,46 @@
             <main>
                 
                     
-                    <div class="searchunicorn-form">
+                <div class="searchunicorn-form">
 
-                            <h5>Fyll i nedan förmulär för att hitta en Unicorn</h5>
+                    <h5>Fyll i fälten nedan så identifierar vi din upptäckt!</h5>
 
-                            <label for="color">Färg</label>
-                            <select id="selector">
-                                <option value="green">Grön</option>
-                                <option value="red">Röd</option>
-                                <option value="yellow">Gul</option>
-                                <option value="blue">Blå</option>
-                                <option value="purple">Lila</option>
-                                <option value="glittery">Glittrig</option>
-                                <option value="orange">Orange</option>
-                                <option value="pink">Rosa</option>
-                                <option value="burgundy">Vinröd</option>
-                                <option value="skyBlue">Himmelsblå</option>
-                                <option value="turquoise">Turkos</option>
-                                <option value="brown">Brun</option>
-                                <option value="beige">Beige</option>
-                                <option value="grey">Grå</option>
-                            </select>
+                    <label for="color">Vilken färg hade manen?</label>
+                    <select id="selector">
+                        <option value="green">Grön</option>
+                        <option value="red">Röd</option>
+                        <option value="yellow">Gul</option>
+                        <option value="blue">Blå</option>
+                        <option value="purple">Lila</option>
+                        <option value="glittery">Glittrig</option>
+                        <option value="orange">Orange</option>
+                        <option value="pink">Rosa</option>
+                        <option value="burgundy">Vinröd</option>
+                        <option value="skyBlue">Himmelsblå</option>
+                        <option value="turquoise">Turkos</option>
+                        <option value="brown">Brun</option>
+                        <option value="beige">Beige</option>
+                        <option value="grey">Grå</option>
+                    </select>
 
-                            <label for="horn">Horn</label>
-                            <input type="text" id="horn" name="horn" placeholder="Beskriv hornet...">
+                    <label for="horn">Hur såg hornet ut?</label>
+                    <input type="text" id="horn" name="horn" placeholder="Beskrivning...">
 
-                            <label for="behaviour">Beteende</label>
-                            <input type="text" id="behaviour" name="behaviour" placeholder="Skriv här...">
+                    <label for="behaviour">Hur betedde den sig?</label>
+                    <input type="text" id="behaviour" name="behaviour" placeholder="Beskrivning...">
 
-                            <label for="reportedBy">Ditt namn</label>
-                            <input type="text" id="reportedBy" name="reportedBy" placeholder="namn">
+                    <label for="reportedBy">Ditt namn</label>
+                    <input type="text" id="reportedBy" name="reportedBy" placeholder="Namn">
 
-                            <label for="spottedWhen">Datum</label>
-                            <input type="date" class='date' name="spottedWhen"> 
-                        
-                            <button type="submit" id="submit">Hitta</button>
-                        
-                        
-                    </div>
+                    <label for="spottedWhen">När såg du enhörningen?</label>
+                    <input type="date" class='date' name="spottedWhen"> 
+                
+                    <button type="submit" id="submit">Hitta</button>
                     
-                    <div id="map"> </div>
+                    
+                </div>
+                
+                <div id="map"> </div>
                 
                 
                 
@@ -91,10 +91,9 @@
                 <div id="container">
                     
                     <div class="topnav">
-                        <h4>About</h4>
-                        <a href="about.html">Om Mythical Beast Profiler</a>
-                        <a href="contact.html">Kontakta oss</a>
-                        <a href="spottedUnicorn.html">Inspiration</a>
+                        <h4>Om</h4>
+                        <a href="/Main/Contact/contact.html">Kontakta oss</a>
+                        <a href="/Main/Spottedunicorn/spottedUnicorn.html">Inspiration</a>
                         <a class="social" href="https://www.instagram.com/mythicalbeastprofiler/" target="_blank">
                             <ion-icon class="instagram" name="logo-instagram"></ion-icon>
                         </a>
