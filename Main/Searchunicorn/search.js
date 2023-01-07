@@ -1,6 +1,10 @@
-var oldMarker
-var locationName
-const loaderCode = '<div class="center"><div class="ring"></div><span>Letar...</span></div>'
+var oldMarker //marker for google maps
+var locationName //the most accurate name for the point on the map
+const loaderCode = '<div class="center"><div class="ring"></div><span>Letar...</span></div>' //loader template
+/**
+ * Initializes the google map and handles the event when a location on the map is pressed
+ * updates the oldMarker and locationName variables
+ */
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
@@ -56,6 +60,10 @@ function initMap() {
      }
 }
 
+/**
+ * Adds all the information from the form and map to localStorage and redirects to Pattern.html
+ * Incase of an error redirects to the error page
+ */
 function postUnicorn() {
     return function() {
         if (validInput()) {
@@ -95,7 +103,10 @@ function postUnicorn() {
         } 
     }
 }
-
+/**
+ * Validates that allt he inputfields are filled in, and changes the color of empty html elements to red.
+ * @returns true if all fields are filled, false if one or more fields is missing.
+ */
 function validInput() {
     let ok = true;
     if (!$('#horn').val()) {
@@ -125,6 +136,9 @@ function validInput() {
     return ok
     
 }
+/**
+ * Adds listener to the submit button
+ */
 $("document").ready(function() {
     $('#submit').click(postUnicorn());
  });

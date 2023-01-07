@@ -1,3 +1,6 @@
+/**
+ * Fetches and updates html elements with results from API call after search
+ */
 $(document).ready(function() {
     $('#imageResult').attr('src', localStorage.getItem('image'))
     $('#unicornNameSearch').html(localStorage.getItem('name'))
@@ -7,7 +10,9 @@ $(document).ready(function() {
     $('#addUnicorn').click(addToDatabase())
 })
 
-
+/**
+ * Makes an API call that adds the current unicorn to the database and clears the localstorage
+ */
 function addToDatabase() {
     return function() {
         let data = {}

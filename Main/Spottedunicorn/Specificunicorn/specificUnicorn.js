@@ -1,12 +1,18 @@
-var id
-const loaderCode = '<div class="center"><div class="ring"></div><span>Letar...</span></div>'
+var id // current id of unicorn
+const loaderCode = '<div class="center"><div class="ring"></div><span>Letar...</span></div>' //loader template
+
+/**
+ * fetches the id from localstorage and adds listeners
+ */
 $('document').ready(function() {
     id = localStorage.getItem('specificID')
     localStorage.clear
     buildHTML()
     $('#add-button').click(getMorePictures())
 })
-
+/**
+ * Calls the API and fetches a unicorn with the specified id and builds the html page
+ */
 function buildHTML() {
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/' + id
@@ -24,7 +30,9 @@ function buildHTML() {
         $('#byWho').html('Unknown')
     })
 }
-
+/**
+ * Calls the api and fetches more two more pictures of the specified unicorn and adds them to the html page
+ */
 function getMorePictures() {
     return function() {
         $('#wrapper').append(loaderCode)
