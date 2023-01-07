@@ -8,6 +8,9 @@ var index //keeps track of shown unicorns
  */
 $('document').ready(function() {
     $('#load-more').click(loadMoreUnicorns())
+    $('#logo').click(function() {
+        document.location = '/Main/index.html'
+    })
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/'
     }).done(function(result) {
@@ -18,9 +21,10 @@ $('document').ready(function() {
         }
     }).fail(function(jqXHR, textStatus, error){
         let template = `
-            <h2>Looks like there are no unicorns here </h2>
+            <h4>Inga enhörningar att visa</h4>
         `
         $('#unicorn-container').append(template)
+        $('#load-more').remove()
     })
 })
 /**

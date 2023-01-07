@@ -141,4 +141,7 @@ function validInput() {
  */
 $("document").ready(function() {
     $('#submit').click(postUnicorn());
+    $('#logo').click(function() {
+        document.location = '/Main/index.html'
+    })
  });

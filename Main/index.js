@@ -2,6 +2,9 @@
  * Fetches a list of the four last unicorns and adds eventlisteners.
  */
 $(document).ready(function() {
+    $('#logo').click(function() {
+        document.location = '/Main/index.html'
+    })
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/'
     }).done(function(result) {
@@ -11,7 +14,7 @@ $(document).ready(function() {
         }
     }).fail(function(jqXHR, textStatus, error){
         let template = `
-            <h2>Looks like there are no unicorns here </h2>
+            <h2>Inga enhörningar att visa</h2>
         `
         $('#unicorn-container').append(template)
     })

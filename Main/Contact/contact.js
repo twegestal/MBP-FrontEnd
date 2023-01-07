@@ -1,5 +1,5 @@
 /**
- * Did not get implemented
+ * Not implemented in this version
  */
 
 $('document').ready(function() {

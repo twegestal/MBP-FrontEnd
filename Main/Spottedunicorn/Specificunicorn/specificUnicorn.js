@@ -49,11 +49,13 @@ function getMorePictures() {
             $('#cont').append(template)
         }).fail(function(jqXHR, textStatus, error) {
             $('.center').remove()
-            if (error) {
-                alert(error)
-            } else {
-                alert('Internal Server Error')
-            }
+            let template = `
+            <div class="container-box">
+                <h4>Det finns tyvärr inga fler bilder på denna enhörning</h4>
+            </div>
+            `
+            $('#cont').append(template)
+            $('#add-button').remove()
         })
         
     }

@@ -8,6 +8,9 @@ $(document).ready(function() {
     $('#location').html(localStorage.getItem('whereName'))
     $('#byWho').html(localStorage.getItem('reportedBy'))
     $('#addUnicorn').click(addToDatabase())
+    $('#logo').click(function() {
+        document.location = '/Main/index.html'
+    })
 })
 
 /**
