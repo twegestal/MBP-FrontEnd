@@ -10,19 +10,20 @@
 
 body{
   background: linear-gradient(
-        90deg,
-        rgba(255, 0, 0, 1) 0%,
-        rgba(255, 154, 0, 1) 10%,
-        rgba(208, 222, 33, 1) 20%,
-        rgba(79, 220, 74, 1) 30%,
-        rgba(63, 218, 216, 1) 40%,
-        rgba(47, 201, 226, 1) 50%,
-        rgba(28, 127, 238, 1) 60%,
-        rgba(95, 21, 242, 1) 70%,
-        rgba(186, 12, 248, 1) 80%,
-        rgba(251, 7, 217, 1) 90%,
-        rgba(255, 0, 0, 1) 100%
-    );
+
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+  );
 }
 
 h1 {
@@ -107,23 +108,24 @@ h4 {
 }
 
 .hamburger-menu{
-  display: none;
+  right: 15px;
   position: absolute;
-  top: 20px;
-  right: 35px;
-  width: 38px;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
   z-index: 999;
+  display: none;
 }
 
 .cross-icon{
-  display: none;
+  right: 15px;
   position: absolute;
-  top: 20px;
-  right: 35px;
-  width: 34px;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
   z-index: 999;
+  display: none;
+
 }
 
 #wrapper > main {
@@ -279,9 +281,30 @@ img, svg {
   font-family: 'Exo 2', sans-serif;
 }
 
+@media screen and (max-width: 1030px ){
+  #wrapper header{
+    justify-content: space-between;
+  }
+  #logo{
+    width: 300px;
+  }
+
+  #wrapper header .topnav a{
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 850px ) {
   
-  .hamburger-menu{
+  #wrapper header #logo{
+    z-index: 999;
+  }
+  
+  #wrapper .hamburger-menu{
+    display: block;
+  }
+
+  #wrapper .cross-icon{
     display: block;
   }
 
@@ -303,7 +326,9 @@ img, svg {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(8px);
     width: 100%;
-    height: 400px;
+    height: 350px;
+    padding-top: 20px;
+
 
   }
 
@@ -312,7 +337,11 @@ img, svg {
     width: 100%;
     justify-content: center;
     border-radius: 0;
+    color: rgba(95, 21, 242, 1);
+ 
+
   }
 
 }
+
 
