@@ -31,16 +31,16 @@ function appendAll(i) {
         <div id="${result['id']}"class="unicornPost">
             <div class="unicorn-picture">
                 <img src="${result['image']}" alt="unicorn">
+                <div class="icons">
+                <span> <i class="fas fa-location"></i>${result['spottedWhere']['name']}</span>
+                <span> <i class="fas fa-user"></i>${result['reportedBy']}</span>
+            </div>
             </div>
             <div class="unicorn-heading">
                 <h3>${result['name']}</h3>
             </div>
             <div class="unicorn-description">
                 <p>${result['description']}</p>
-            </div>
-            <div class="icons">
-                <span> <i class="fas fa-location"></i>${result['spottedWhere']['name']}</span>
-                <span> <i class="fas fa-user"></i>${result['reportedBy']}</span>
             </div>
         </div>`
         $('#unicorn').append(template)

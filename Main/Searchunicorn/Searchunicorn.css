@@ -1,10 +1,16 @@
-#wrapper main .searchunicorn-form{
-    display: grid;
-    width: 400px;
-    height: 500px; 
+#wrapper main .searchunicorn-container{
+    height: 490px;
+    margin: 5px;
     background-color: rgba(255,255,255, 0.4);
-    border-radius: 5px;
     border: 1px solid rgb(38 143 255);
+    border-radius: 5px;
+}
+
+#wrapper main .searchunicorn-form{
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    width: 400px;
     float: left;
     margin: 5px;
     font-size: 22px;
@@ -26,23 +32,31 @@
     font-size: 15px;
 }
 
-#wrapper main .searchunicorn-form button{
+#wrapper main .searchunicorn-container #submit{
     padding: 10px;
     border: 1px solid rgb(38 143 255);
     border-radius: 30px;
-    margin: 5px;
+    margin: 10px;
     background-color: rgba(255, 255, 255, 0.46);
+    width: 380px;
 }
 
-#wrapper main .searchunicorn-form button:hover{
+#wrapper main .searchunicorn-container #submit:hover, button:hover{
     background-color: rgb(38 143 255 / 50%);
     color: #f8f5e6;
 }
 
 #map {
-    height: 500px;
-    width: 400px;
+    width: 400;
+    height: 420px;
     border-radius: 5px;
     border: 1px solid rgb(38 143 255);
     margin: 5px;
+}
+
+@media screen and (max-width: 850px ){
+    #wrapper main .searchunicorn-container{
+        display: grid;
+        height: auto;
+    }
 }
