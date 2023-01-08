@@ -166,6 +166,7 @@ h4 {
 
 #wrapper > main .välkommen button:hover {
   -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 #wrapper > main .unicorn {
