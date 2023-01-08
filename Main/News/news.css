@@ -38,3 +38,13 @@
     color: black;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 560px ){
+    #wrapper main .news-container {
+      width: auto;
+    }
+
+    #wrapper main .news-container button{
+        margin: auto;
+    }
+  }

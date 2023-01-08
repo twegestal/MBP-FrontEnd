@@ -1,9 +1,11 @@
 #wrapper main .searchunicorn-container {
-    height: 560px;   
+    height: auto; 
+    max-width: 850px;
+    margin: auto;  
     background-color: rgba(255,255,255, 0.4);
     border: 1px solid rgb(38 143 255);
     border-radius: 5px;
-    padding: 10px;   
+
 }
 
 #wrapper main .searchunicorn-form {
@@ -35,7 +37,6 @@
 }
 
 #wrapper main .searchunicorn-container #submit {
-    margin-left: -60px;
     margin-top: 20px;
     width: 120px;
     height: 80px;
@@ -62,9 +63,24 @@
     
 }
 
-@media screen and (max-width: 850px ) {
-    #wrapper main .searchunicorn-container {
-        display: grid;
-        height: auto;
+@media screen and (max-width: 850px ){
+
+    #wrapper main .searchunicorn-container{
+        max-width: 410px;
+    }
+
+    #map{
+        margin: auto;
+    }
+
+    #wrapper main .searchunicorn-container #submit{
+        position: relative;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 430px ){
+    #wrapper main .searchunicorn-form, #map{
+        width: auto;
     }
 }
