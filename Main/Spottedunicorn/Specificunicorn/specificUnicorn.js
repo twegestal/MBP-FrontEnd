@@ -9,6 +9,9 @@ $('document').ready(function() {
     localStorage.clear
     buildHTML()
     $('#add-button').click(getMorePictures())
+    $('#logo').click(function() {
+        document.location = '/Main/index.html'
+    })
 })
 /**
  * Calls the API and fetches a unicorn with the specified id and builds the html page

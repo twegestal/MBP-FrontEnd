@@ -183,7 +183,7 @@ h4 {
   float: left;
   display:none;
   overflow: hidden;
-
+ 
 }
 
 #wrapper .unicorn .unicornPost:nth-child(-n+4) {
@@ -238,8 +238,6 @@ h4 {
 .unicornPost > .unicorn-description {
   margin: 5px;
   padding: 5px;
-  text-decoration: none;
-  
 }
 
 #wrapper main .unicorn .unicorn-picture > .icons {

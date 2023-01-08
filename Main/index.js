@@ -51,6 +51,10 @@ function appendAll(i) {
         <div class="unicorn-container-box">
             <div class="unicorn-picture">
                 <img src="" alt="Image not found">
+                <div class="icons">
+                    <span> <i class="fas fa-location"></i>Unknown</span>
+                    <span> <i class="fas fa-user"></i>Unknown</span>
+                </div>
             </div>
             <div class="unicorn-heading">
                 <h3>Unicorn not found</h3>
@@ -58,10 +62,6 @@ function appendAll(i) {
             <div class="unicorn-description">
                 <p>Looks like there's nothing here</p>
 
-            </div>
-            <div class="icons">
-                <span> <i class="fas fa-location"></i>Unknown</span>
-                <span> <i class="fas fa-user"></i>Unknown</span>
             </div>
         </div>`
         $('#unicorn').append(template)
