@@ -9,7 +9,7 @@
     transition: .8s ease;
 }
 
-#wrapper main #unicorn-container .unicorn-container-box{
+#wrapper main #unicorn-container .unicorn-container-box {
     background-color: rgba(255,255,255, 0.4);
     width: 480px ;
     height: 400px ;
@@ -22,7 +22,7 @@
 }
 
 
-#wrapper main #unicorn-container .unicorn-container-box .unicorn-picture{
+#wrapper main #unicorn-container .unicorn-container-box .unicorn-picture {
     margin: 3px;
     overflow: hidden;
     width: 270px;
@@ -39,13 +39,13 @@
     object-fit: cover;
 }
 
-#wrapper main #unicorn-container .unicorn-container-box .unicorn-heading{
+#wrapper main #unicorn-container .unicorn-container-box .unicorn-heading {
     margin: 5px;
     padding: 5px;
     text-decoration: none;
 }
 
-#wrapper main #unicorn-container .unicorn-container-box .unicorn-description{
+#wrapper main #unicorn-container .unicorn-container-box .unicorn-description {
     margin: 5px;
     padding: 5px;
     text-decoration: none;
@@ -63,35 +63,27 @@
 .unicorn-picture > .icons span {
     font-size: 12px;
     color: rgba(95, 21, 242);
-  }
+}
   
-  .unicorn-picture > .icons span i{
+.unicorn-picture > .icons span i {
     color: rgba(28, 127, 238);
     padding-right: 5px;
-  }
+}
 
-#wrapper main #spotted-unicorn-header{
+#wrapper main #spotted-unicorn-header {
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: rgba(255,255,255, 0.4);
 }
-
-#wrapper main #spotted-unicorn-header h3 {
-    color: #f8f5e6;
-    font-size: 25px;
-    padding: 10px 0 5px 10px;
-    margin: 0;
-}
   
-#wrapper main #spotted-unicorn-header h4 {
-    color: #f8f5e6;
-    font-size: 18px;
-    padding: 5px 0 10px 12px;
-    margin: 0;
+#wrapper main #spotted-unicorn-header p {
+    color: #030303;
+    margin: 10px 0 0 20px;
+    font-size: 23px;  
 }
 
-#wrapper > main #load-more{
+#wrapper > main #load-more {
     margin-left: 435px;
     width: 120px;
     height: 80px;
@@ -104,6 +96,6 @@
     background-position: center;
 }
 
-#wrapper main #load-more:hover{
+#wrapper main #load-more:hover {
     -webkit-transform: scale(1.2);
 }
