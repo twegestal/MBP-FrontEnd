@@ -1,24 +1,26 @@
 #wrapper main #unicorn-container {
-    margin: 5px 0;
-}
-
-.unicorn-container-box:hover {
-    -webkit-box-shadow: 0px 0px 100px 0px rgb(255, 0, 153);
-    -moz-box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
-    box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
-    transition: .8s ease;
+    margin-top: 10px;
+    width: 1000px;
 }
 
 #wrapper main #unicorn-container .unicorn-container-box {
     background-color: rgba(255,255,255, 0.4);
     width: 480px ;
     height: 400px ;
+    margin-left: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 5px;
     float: left;
     display:inline;
     overflow: hidden;  
+   
+}
+.unicorn-container-box:hover {
+    -webkit-box-shadow: 0px 0px 100px 0px rgb(255, 0, 153);
+    -moz-box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
+    box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
+    transition: .8s ease;
 }
 
 
@@ -42,13 +44,11 @@
 #wrapper main #unicorn-container .unicorn-container-box .unicorn-heading {
     margin: 5px;
     padding: 5px;
-    text-decoration: none;
 }
 
 #wrapper main #unicorn-container .unicorn-container-box .unicorn-description {
     margin: 5px;
     padding: 5px;
-    text-decoration: none;
 }
 
 #wrapper main #unicorn-container .unicorn-container-box .unicorn-picture .icons {
@@ -72,14 +72,15 @@
 
 #wrapper main #spotted-unicorn-header {
     border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 20px;
     background-color: rgba(255,255,255, 0.4);
+    box-shadow: #333333 0px 1px 5px;
+    transition: box-shadaw 0.2s ease;
 }
   
 #wrapper main #spotted-unicorn-header p {
     color: #030303;
-    margin: 10px 0 0 20px;
+    margin-left: 3px;
     font-size: 23px;  
 }
 
@@ -89,7 +90,7 @@
     height: 80px;
     text-align:center;
     font-size: 15px;
-    padding-top: 3px;
+    padding-top: 5px;
     background: url("/Main/cloud-btn.svg");
     background-size:contain;
     background-repeat: no-repeat;
@@ -98,4 +99,5 @@
 
 #wrapper main #load-more:hover {
     -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }

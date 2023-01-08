@@ -21,7 +21,6 @@
     margin: 5px;
     padding: 5px 15px;
     text-decoration: none;
-    font-size: 12px;
     font-size: 15px;
 }
 
@@ -65,16 +64,20 @@
 }
 
 .container .container-box #add-button button{
-    margin-top: 20px;
-    padding: 14px 23px;
-    border-radius: 5px;
-    border: 1px solid rgb(38 143 255);
+    padding-top: 6px;
+    width: 130px;
+    height: 90px;
+    text-align:center;
+    font-size: 18px;
+    background: url("/Main/cloud-btn.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .container .container-box #add-button button:hover{
-    background-color: rgb(38 143 255 / 30%);
-    color: #333333;
-    border: none;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 

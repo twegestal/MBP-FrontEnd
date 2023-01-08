@@ -8,7 +8,7 @@ $('document').ready(function() {
     id = localStorage.getItem('specificID')
     localStorage.clear
     buildHTML()
-    $('#add-button').click(getMorePictures())
+    $('#addUnicorn').click(getMorePictures())
     $('#logo').click(function() {
         document.location = '/Main/index.html'
     })
@@ -44,7 +44,7 @@ function getMorePictures() {
         }).done(function(result) {
             $('.center').remove()
             let template = `
-            <div class="container-box">
+            <div class="js-add">
                 <img src="${result[0]['url']}" class="imageResult" alt="Bild hittades inte">
                 <img src="${result[1]['url']}" class="imageResult" alt="Bild hittades inte">
             </div>
@@ -53,7 +53,7 @@ function getMorePictures() {
         }).fail(function(jqXHR, textStatus, error) {
             $('.center').remove()
             let template = `
-            <div class="container-box">
+            <div class="js-add">
                 <h4>Det finns tyvärr inga fler bilder på denna enhörning</h4>
             </div>
             `
