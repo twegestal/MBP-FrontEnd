@@ -1,7 +1,7 @@
 #wrapper main .searchunicorn-container {
     height: auto; 
-    max-width: 850px;
-    margin: auto;  
+    max-width: 810px;
+    margin: 10px auto;  
     background-color: rgba(255,255,255, 0.4);
     border: 1px solid rgb(38 143 255);
     border-radius: 5px;
@@ -37,6 +37,8 @@
 }
 
 #wrapper main .searchunicorn-container #submit {
+    position: relative;
+    right: 10%;
     margin-top: 20px;
     width: 120px;
     height: 80px;
@@ -82,5 +84,17 @@
 @media screen and (max-width: 430px ){
     #wrapper main .searchunicorn-form, #map{
         width: auto;
+    }
+
+    #wrapper main .searchunicorn-container #submit{
+        right: 0 ;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 330px ){
+    #wrapper main .searchunicorn-container #submit{
+        right: 0 ;
+        left: 22%;
     }
 }
