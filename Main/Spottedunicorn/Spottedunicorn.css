@@ -1,7 +1,5 @@
 #wrapper main #unicorn-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    gap: 5px;
+    margin: 5px 0;
 }
 
 .unicorn-container-box:hover {
@@ -9,32 +7,34 @@
     -moz-box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
     box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
     transition: .8s ease;
-
 }
 
 #wrapper main #unicorn-container .unicorn-container-box{
     background-color: rgba(255,255,255, 0.4);
+    width: 480px ;
     height: 400px ;
     border-radius: 5px;
     cursor: pointer;
     margin: 5px;
     float: left;
-    display: inline;
+    display:inline;
+    overflow: hidden;  
 }
 
 
 #wrapper main #unicorn-container .unicorn-container-box .unicorn-picture{
     margin: 3px;
     overflow: hidden;
-    width: 260px;
-    height: 190px;
+    width: 270px;
+    height: 210px;
     border-radius: 5px;
     display: block;
     float: right;
+    box-shadow: 0px 1px 5px rgb(38 143 255);  
 }
 
 #wrapper main #unicorn-container .unicorn-container-box .unicorn-picture img {
-    height: 100%;
+    height: 170px;
     width: 100%;
     object-fit: cover;
 }
@@ -42,35 +42,33 @@
 #wrapper main #unicorn-container .unicorn-container-box .unicorn-heading{
     margin: 5px;
     padding: 5px;
-    text-decoration: none
+    text-decoration: none;
 }
 
 #wrapper main #unicorn-container .unicorn-container-box .unicorn-description{
     margin: 5px;
     padding: 5px;
     text-decoration: none;
-    font-size: 12px;
 }
 
-#wrapper main #unicorn-container .unicorn-container-box .icons {
+#wrapper main #unicorn-container .unicorn-container-box .unicorn-picture .icons {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
-    padding-top: 10px;
+    margin: 0 5px;
+    padding-top: 5px;
     border-top: 1px solid rgb(38 143 255);
-    
 }
   
-#wrapper main #unicorn-container .unicorn-container-box .icons span {
+.unicorn-picture > .icons span {
     font-size: 12px;
-    color: #777;
-}
+    color: rgba(95, 21, 242);
+  }
   
-#wrapper main #unicorn-container .unicorn-container-box .icons span i{
-    color: #333333;
+  .unicorn-picture > .icons span i{
+    color: rgba(28, 127, 238);
     padding-right: 5px;
-}
+  }
 
 #wrapper main #spotted-unicorn-header{
     border-radius: 5px;
@@ -98,7 +96,8 @@
     width: 120px;
     height: 80px;
     text-align:center;
-    padding-top: 32px;
+    font-size: 15px;
+    padding-top: 3px;
     background: url("/Main/cloud-btn.svg");
     background-size:contain;
     background-repeat: no-repeat;

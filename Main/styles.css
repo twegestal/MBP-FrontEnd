@@ -170,7 +170,6 @@ h4 {
 
 #wrapper > main .unicorn {
   margin: 5px 0;
-
 }
 
 #wrapper > main .unicorn .unicornPost {
@@ -181,13 +180,9 @@ h4 {
   cursor: pointer;
   margin: 5px;
   float: left;
-  display:none;
+  display:inline;
   overflow: hidden;
 
-}
-
-#wrapper .unicorn .unicornPost:nth-child(-n+4) {
-  display: inline-block;  
 }
 
 .unicornPost > .unicorn-picture {
