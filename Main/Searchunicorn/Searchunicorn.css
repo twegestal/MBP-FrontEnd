@@ -1,57 +1,75 @@
 #wrapper main .searchunicorn-container{
-    height: 490px;
-    margin: 5px;
+    height: 560px;   
     background-color: rgba(255,255,255, 0.4);
     border: 1px solid rgb(38 143 255);
     border-radius: 5px;
+    padding: 10px;   
 }
 
 #wrapper main .searchunicorn-form{
     display: flex;
     flex-direction: column;
-    height: 420px;
+    height: 440px;
     width: 400px;
     float: left;
-    margin: 5px;
     font-size: 22px;
     padding: 10px;
 }
 
-#wrapper main .searchunicorn-form > label{
-    margin: 5px;
-    margin-top: 10px;
-    font-size: 16px;
+#wrapper main .searchunicorn-form > h5 {
+    margin-bottom: 10px;
+}
+
+#wrapper main .searchunicorn-form > label{   
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 17px;
 }
 
 #wrapper main .searchunicorn-form > select, input{
     padding: 5px;
     border: 1px solid rgb(38 143 255);
     border-radius: 5px;
-    margin: 5px;
     background-color: rgba(255, 255, 255, 0.64);
     font-size: 15px;
 }
 
 #wrapper main .searchunicorn-container #submit{
-    padding: 10px;
-    border: 1px solid rgb(38 143 255);
-    border-radius: 30px;
-    margin: 10px;
-    background-color: rgba(255, 255, 255, 0.46);
-    width: 380px;
+    margin-left: -60px;
+    margin-top: 20px;
+    width: 120px;
+    height: 80px;
+    text-align:center;
+    font-size: 18px;
+    background: url("/Main/cloud-btn.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
+#wrapper > main .välkommen button {
+    text-align:center;
+    font-size: 18px;
+    background: url("/Main/cloud-btn.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 #wrapper main .searchunicorn-container #submit:hover, button:hover{
-    background-color: rgb(38 143 255 / 50%);
-    color: #f8f5e6;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 #map {
     width: 400;
     height: 420px;
     border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
     border: 1px solid rgb(38 143 255);
-    margin: 5px;
+    
 }
 
 @media screen and (max-width: 850px ){

@@ -8,9 +8,8 @@
   text-decoration: none;
 }
 
-body{
+body {
   background: linear-gradient(
-
     90deg,
     rgba(255, 0, 0, 1) 0%,
     rgba(255, 154, 0, 1) 10%,
@@ -94,11 +93,10 @@ h4 {
   font-size: 20px;
 }
 
-.social > ion-icon{
+.social > ion-icon {
   font-size: 20px;
   text-decoration: none;
   color: #333333;
-
 }
 
 .topnav a:hover {
@@ -107,7 +105,7 @@ h4 {
   border-radius: 10px;
 }
 
-.hamburger-menu{
+.hamburger-menu {
   right: 15px;
   position: absolute;
   width: 80px;
@@ -117,7 +115,7 @@ h4 {
   display: none;
 }
 
-.cross-icon{
+.cross-icon {
   right: 15px;
   position: absolute;
   width: 80px;
@@ -125,7 +123,6 @@ h4 {
   cursor: pointer;
   z-index: 999;
   display: none;
-
 }
 
 #wrapper > main {
@@ -135,7 +132,6 @@ h4 {
   margin: 65px auto auto auto;
   padding-top: 10px;
 }
-
 
 #wrapper > main .välkommen {
   box-shadow: 0px 1px 5px #333333;
@@ -149,7 +145,6 @@ h4 {
   color: #030303;
   margin: 10px 0 0 20px;
   font-size: 23px;
-
 }
 
 #wrapper > main .välkommen button {
@@ -166,11 +161,11 @@ h4 {
 
 #wrapper > main .välkommen button:hover {
   -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 #wrapper > main .unicorn {
   margin: 5px 0;
-
 }
 
 #wrapper > main .unicorn .unicornPost {
@@ -181,13 +176,8 @@ h4 {
   cursor: pointer;
   margin: 5px;
   float: left;
-  display:none;
+  display:inline;
   overflow: hidden;
- 
-}
-
-#wrapper .unicorn .unicornPost:nth-child(-n+4) {
-  display: inline-block;  
 }
 
 .unicornPost > .unicorn-picture {
@@ -199,10 +189,9 @@ h4 {
   display: block;
   float: right;
   box-shadow: 0px 1px 5px rgb(38 143 255);
-
 }
 
-.unicornPost:hover{
+.unicornPost:hover {
   -webkit-box-shadow: 0px 0px 100px 0px rgb(255, 0, 153);
   -moz-box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
   box-shadow: 0px 0px 100px 0px rgba(255, 0, 153,1);
@@ -247,7 +236,6 @@ h4 {
   margin: 0 5px;
   padding-top: 5px;
   border-top: 1px solid rgb(38 143 255);
-  
 }
 
 .unicorn-picture > .icons span {
@@ -255,7 +243,7 @@ h4 {
   color: rgba(95, 21, 242);
 }
 
-.unicorn-picture > .icons span i{
+.unicorn-picture > .icons span i {
   color: rgba(28, 127, 238);
   padding-right: 5px;
 }
@@ -282,40 +270,38 @@ h4 {
   font-family: 'Exo 2', sans-serif;
 }
 
-@media screen and (max-width: 1030px ){
+@media screen and (max-width: 1030px) {
   #wrapper header{
     justify-content: space-between;
   }
   #logo{
     width: 300px;
   }
-
   #wrapper header .topnav a{
     font-size: 15px;
   }
 }
 
 @media screen and (max-width: 850px ) {
-  
   #wrapper header #logo{
     z-index: 999;
   }
   
-  #wrapper .hamburger-menu{
+  #wrapper .hamburger-menu {
     display: block;
   }
 
-  #wrapper .cross-icon{
+  #wrapper .cross-icon {
     display: block;
   }
 
-  #wrapper header h1{
+  #wrapper header h1 {
     position: absolute;
     top: 20px;
     left: 10px;
     z-index: 2;
-
   }
+
   #wrapper header .topnav {
     top: 0;
     left: 0;
@@ -329,8 +315,6 @@ h4 {
     width: 100%;
     height: 350px;
     padding-top: 20px;
-
-
   }
 
   #wrapper header .topnav a{
@@ -339,10 +323,5 @@ h4 {
     justify-content: center;
     border-radius: 0;
     color: rgba(95, 21, 242, 1);
- 
-
   }
-
 }
-
-

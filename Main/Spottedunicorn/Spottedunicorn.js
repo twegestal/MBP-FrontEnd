@@ -57,6 +57,10 @@ function addTemplate(i) {
         <div id="${result['id']}"class="unicorn-container-box">
             <div class="unicorn-picture">
                 <img src="${result['image']}" alt="Image not found">
+                <div class="icons">
+                    <span> <i class="fas fa-location"></i>${result['spottedWhere']['name']}</span>
+                    <span> <i class="fas fa-user"></i>${result['reportedBy']}</span>
+                </div>
             </div>
             <div class="unicorn-heading">
                 <h3>${result['name']}</h3>
@@ -64,10 +68,6 @@ function addTemplate(i) {
             <div class="unicorn-description">
                 <p>${result['description']}</p>
 
-            </div>
-            <div class="icons">
-                <span> <i class="fas fa-location"></i>${result['spottedWhere']['name']}</span>
-                <span> <i class="fas fa-user"></i>${result['reportedBy']}</span>
             </div>
         </div>`
         $('#unicorn-container').append(template)
@@ -78,6 +78,10 @@ function addTemplate(i) {
         <div class="unicorn-container-box">
             <div class="unicorn-picture">
                 <img src="" alt="Image not found">
+                <div class="icons">
+                    <span> <i class="fas fa-location"></i>Unknown</span>
+                    <span> <i class="fas fa-user"></i>Unknown</span>
+                </div>
             </div>
             <div class="unicorn-heading">
                 <h3>Unicorn not found</h3>
@@ -85,10 +89,6 @@ function addTemplate(i) {
             <div class="unicorn-description">
                 <p>Looks like there's nothing here</p>
 
-            </div>
-            <div class="icons">
-                <span> <i class="fas fa-location"></i>Unknown</span>
-                <span> <i class="fas fa-user"></i>Unknown</span>
             </div>
         </div>`
         $('#unicorn-container').append(template)
