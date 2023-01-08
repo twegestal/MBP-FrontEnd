@@ -152,7 +152,7 @@ h4 {
 #wrapper > main .välkommen button {
   margin-top: 10px;
   position: relative;
-  left: 50%;
+  left: 44%;
   width: 120px;
   height: 80px;
   text-align:center;
@@ -357,6 +357,15 @@ h4 {
 }
 
 @media screen and (max-width: 430px ){
+
+  #logo{
+    width: 200px;
+  }
+
+  .cross-icon, .hamburger-menu{
+    width: 30px;
+    height: 30px;
+  }
 
   #wrapper > main .unicorn{
     display: flex;
