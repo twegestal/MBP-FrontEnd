@@ -1,4 +1,4 @@
-#wrapper main .searchunicorn-container{
+#wrapper main .searchunicorn-container {
     height: 560px;   
     background-color: rgba(255,255,255, 0.4);
     border: 1px solid rgb(38 143 255);
@@ -6,7 +6,7 @@
     padding: 10px;   
 }
 
-#wrapper main .searchunicorn-form{
+#wrapper main .searchunicorn-form {
     display: flex;
     flex-direction: column;
     height: 440px;
@@ -20,13 +20,13 @@
     margin-bottom: 10px;
 }
 
-#wrapper main .searchunicorn-form > label{   
+#wrapper main .searchunicorn-form > label {   
     margin-top: 20px;
     margin-bottom: 5px;
     font-size: 17px;
 }
 
-#wrapper main .searchunicorn-form > select, input{
+#wrapper main .searchunicorn-form > select, input {
     padding: 5px;
     border: 1px solid rgb(38 143 255);
     border-radius: 5px;
@@ -34,7 +34,7 @@
     font-size: 15px;
 }
 
-#wrapper main .searchunicorn-container #submit{
+#wrapper main .searchunicorn-container #submit {
     margin-left: -60px;
     margin-top: 20px;
     width: 120px;
@@ -47,7 +47,7 @@
     background-position: center;
 }
 
-#wrapper main .searchunicorn-container #submit:hover, button:hover{
+#wrapper main .searchunicorn-container #submit:hover, button:hover {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -62,8 +62,8 @@
     
 }
 
-@media screen and (max-width: 850px ){
-    #wrapper main .searchunicorn-container{
+@media screen and (max-width: 850px ) {
+    #wrapper main .searchunicorn-container {
         display: grid;
         height: auto;
     }

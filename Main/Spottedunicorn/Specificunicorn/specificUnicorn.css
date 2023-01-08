@@ -1,4 +1,4 @@
-.container{
+.container {
     box-shadow: 0px 1px 5px #333333;
     background-color: rgba(255,255,255, 0.4);
     min-height: 450px;
@@ -14,26 +14,25 @@
     margin-left: 20px;
 }
 
-.container .container-heading{
+.container .container-heading {
     margin: 5px;
     padding: 15px 5px 5px 15px;
 }
 
-.container .container-heading h3{
+.container .container-heading h3 {
     font-size: 30px;
-    
 }
 
-.container .container-description{
+.container .container-description {
     margin: 5px;
     padding: 5px 15px;
 }
 
-.container .container-description p{
+.container .container-description p {
     font-size: 20px;
 }
 
-.container .container-image{
+.container .container-image {
     margin: 10px;
     overflow: hidden;
     width: 320px;
@@ -44,31 +43,31 @@
     box-shadow: 0px 1px 5px rgb(38 143 255);
 }
 
-.container .container-image img{
+.container .container-image img {
     height: 87%;
     width: 100%;
     object-fit: cover;
 }
 
-.container .container-image .icons{
+.container .container-image .icons {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid rgb(38 143 255);
 }
 
-.container .container-box .icons span{
+.container .container-box .icons span {
     font-size: 12px;
     margin: 7px 10px;
     color: #777;
 }
 
-.container .container-box .icons span i{
+.container .container-box .icons span i {
     color: #333333;
     padding-right: 5px;
 }
 
-.container .container-box #add-button{
+.container .container-box #add-button {
     margin: 20px;
 }
 
@@ -76,7 +75,7 @@
     font-size: 20px;
 }
 
-.container .container-box #add-button button{
+.container .container-box #add-button button {
     padding-top: 6px;
     width: 130px;
     height: 90px;
@@ -88,16 +87,16 @@
     background-position: center;
 }
 
-.container .container-box #add-button button:hover{
+.container .container-box #add-button button:hover {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 
-.container .js-add{
+.container .js-add {
     margin: 20px;
 }
 
-#wrapper .container .container-images{
+#wrapper .container .container-images {
     margin-top: 5px;
     padding: 3px;
     border-top: 1px solid rgb(38 143 255);
@@ -105,16 +104,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 5px;
-
 }
 
-#wrapper .container .container-images img{
+#wrapper .container .container-images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     background-color: aqua;
-
 }
-
-
-

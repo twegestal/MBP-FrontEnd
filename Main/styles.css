@@ -31,7 +31,6 @@ h1 {
   margin: 0 200px 0 22px;
   text-decoration: none;
   color: #333333;
-  
 }
 
 h2 {
@@ -43,7 +42,6 @@ h2 {
 h3 {
   font-size: 16px;
   color:#333333;
-
 }
 
 h4 {
@@ -173,11 +171,9 @@ h4 {
 #wrapper > main .unicorn {
   width: 1000px;
   margin-top: 10px;
-  
 }
 
 #wrapper > main .unicorn .unicornPost {
-
   background-color: rgba(255,255,255, 0.4);
   width: 480px ;
   height: 400px ;

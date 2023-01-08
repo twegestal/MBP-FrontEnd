@@ -22,7 +22,7 @@ $('document').ready(function() {
         if (index === 0) {
             $('#load-more').remove()
         }
-    }).fail(function(jqXHR, textStatus, error){
+    }).fail(function(jqXHR, textStatus, error) {
         let template = `
             <h4>Inga enhörningar att visa</h4>
         `
@@ -73,7 +73,7 @@ function addTemplate(i) {
         $('#unicorn-container').append(template)
         let ID = '#' + result['id']
         $(ID).click(openSpecific(result['id']))
-    }).fail(function(jqXHR, textStatus, error){
+    }).fail(function(jqXHR, textStatus, error) {
         let template = `
         <div class="unicorn-container-box">
             <div class="unicorn-picture">

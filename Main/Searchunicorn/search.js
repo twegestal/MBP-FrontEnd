@@ -99,7 +99,6 @@ function postUnicorn() {
                 document.location = '/Main/Error/error.html'
             
             })
-        
         } 
     }
 }
@@ -134,7 +133,6 @@ function validInput() {
         
     }
     return ok
-    
 }
 /**
  * Adds listener to the submit button

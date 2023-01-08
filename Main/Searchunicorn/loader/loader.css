@@ -1,4 +1,4 @@
-.center{
+.center {
     margin: 0;
     padding: 0;
     background: rgb(0, 0, 0, .5);
@@ -12,8 +12,7 @@
     position: fixed;
 }
 
-.ring{
-
+.ring {
     position: absolute;
     width: 150px;
     height: 150px;
@@ -21,26 +20,26 @@
     animation: ring 2s linear infinite;
 }
 
-@keyframes ring{
+@keyframes ring {
 
-    0%{
+    0% {
         transform: rotate(0deg);
         box-shadow: 1px 5px 2px #37eb00;
     }
 
-    50%{
+    50% {
         transform: rotate(180deg);
         box-shadow: 1px 5px 2px #e600a9;
     }
 
-    100%{
+    100% {
         transform: rotate(360deg);
         box-shadow: 1px 5px 2px #04e4f4;
     }
 
 }
 
-.ring::before{
+.ring::before {
     position: absolute;
     content: '';
     left: 0;
@@ -51,7 +50,7 @@
     box-shadow: 0 0 5px rgba(255, 255, 255, .3);
 }
 
-.center span{
+.center span {
     color: #ffffff;
     font-size: 20px;
     text-transform: uppercase;

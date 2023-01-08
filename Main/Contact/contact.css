@@ -5,10 +5,9 @@
     border-radius: 5px;
     border: 1px solid rgb(38 143 255);
     margin: 10px auto;
-  
   }
 
-  #wrapper main .contact-container h5{
+  #wrapper main .contact-container h5 {
     font-size: 20px;
     text-decoration: none;
     margin: 20px;
@@ -21,15 +20,15 @@
     line-height: 30px;
   }
 
-  #wrapper main .contact-container .contact-form-box form{
+  #wrapper main .contact-container .contact-form-box form {
     display: grid;
   }
 
-  #wrapper main .contact-container form label{
+  #wrapper main .contact-container form label {
     margin-left: 20px;
   } 
 
-  #wrapper main .contact-container form input, select, textarea{
+  #wrapper main .contact-container form input, select, textarea {
     width: 80%;
     padding: 10px;
     border: 1px solid rgb(38 143 255);
@@ -38,7 +37,7 @@
     margin: 6px 0 10px 20px;
   }
 
-  #wrapper main .contact-container form input[type=submit]{
+  #wrapper main .contact-container form input[type=submit] {
     background-color: rgb(38 143 255);
     color: black;
     padding: 12px 20px;
@@ -46,7 +45,6 @@
     margin-top: 12px;
   }
 
-  #wrapper main .contact-container form input[type=submit]:hover{
+  #wrapper main .contact-container form input[type=submit]:hover {
     background-color: rgb(38 143 255 / 50%);
   } 
-

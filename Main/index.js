@@ -46,7 +46,7 @@ function appendAll(i) {
         $('#unicorn').append(template)
         let ID = '#' + result['id']
         $(ID).click(openSpecific(result['id']))
-    }).fail(function(jqXHR, textStatus, error){
+    }).fail(function(jqXHR, textStatus, error) {
         let template = `
         <div class="unicorn-container-box">
             <div class="unicorn-picture">

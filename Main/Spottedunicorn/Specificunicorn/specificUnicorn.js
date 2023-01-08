@@ -59,7 +59,6 @@ function getMorePictures() {
             `
             $('#cont').append(template)
             $('#add-button').remove()
-        })
-        
+        })   
     }
 }
