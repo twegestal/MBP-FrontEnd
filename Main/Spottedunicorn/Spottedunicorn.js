@@ -44,7 +44,10 @@ function loadMoreUnicorns() {
         }
     }
 }
-
+function replace(i) {
+    let s = '#u' + i
+    $(s).attr('src', '/Main/unicorn.png')
+}
 /**
  * Fetches one unicorn from the database and adds it to the html page.
  * @param {*} i The id for the unicorn to be fetched from the API and added to the html page
@@ -56,7 +59,7 @@ function addTemplate(i) {
         let template = `
         <div id="${result['id']}"class="unicorn-container-box">
             <div class="unicorn-picture">
-                <img src="${result['image']}" alt="Image not found">
+            <img id=u${result['id']} src="${result['image']}" onerror=replace(${result['id']})>
                 <div class="icons">
                     <span> <i class="fas fa-location"></i>${result['spottedWhere']['name']}</span>
                     <span> <i class="fas fa-user"></i>${result['reportedBy']}</span>

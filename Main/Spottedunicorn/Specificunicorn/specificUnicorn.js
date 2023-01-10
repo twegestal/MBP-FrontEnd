@@ -13,6 +13,9 @@ $('document').ready(function() {
         document.location = '/Main/index.html'
     })
 })
+function replace() {
+    $('#imageResult').attr('src', '/Main/unicorn.png')
+}
 /**
  * Calls the API and fetches a unicorn with the specified id and builds the html page
  */

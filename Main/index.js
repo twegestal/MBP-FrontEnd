@@ -19,6 +19,10 @@ $(document).ready(function() {
         $('#unicorn-container').append(template)
     })
 })
+function replace(i) {
+    let s = '#u' + i
+    $(s).attr('src', '/Main/unicorn.png')
+}
 /**
  * Fetches a specific unicorn and builds a html element with its information
  * @param {*} i Integer representing the specific id
@@ -30,7 +34,7 @@ function appendAll(i) {
         let template = `
         <div id="${result['id']}"class="unicornPost">
             <div class="unicorn-picture">
-                <img src="${result['image']}" alt="unicorn">
+                <img id=u${result['id']} src="${result['image']}" onerror=replace(${result['id']})>
                 <div class="icons">
                 <span> <i class="fas fa-location"></i>${result['spottedWhere']['name']}</span>
                 <span> <i class="fas fa-user"></i>${result['reportedBy']}</span>
