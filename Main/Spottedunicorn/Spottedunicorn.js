@@ -31,15 +31,15 @@ $('document').ready(function() {
     })
 })
 /**
- * Adds four more unicorns to the html page. 
+ * Adds four more unicorns to the html page.  
  */
 function loadMoreUnicorns() {
     return function() {
-        let max = Math.max(index-4, 0)
-        for(; index > max; index--) {
+        let max = Math.max(index-3, 0)
+        for(; index >= max; index--) {
             addTemplate(list[index]['id'])
         }
-        if (index === 0) {
+        if (index < 0) {
             $('#load-more').remove()
         }
     }

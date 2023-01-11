@@ -6,7 +6,7 @@ const loaderCode = '<div class="center"><div class="ring"></div><span>Letar...</
  */
 $('document').ready(function() {
     id = localStorage.getItem('specificID')
-    localStorage.clear
+    localStorage.removeItem('specificID')
     buildHTML()
     $('#addUnicorn').click(getMorePictures())
     $('#logo').click(function() {
