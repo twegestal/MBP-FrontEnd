@@ -81,7 +81,7 @@
     height: 90px;
     text-align:center;
     font-size: 18px;
-    background: url("/Main/cloud-btn.svg");
+    background: url("../../cloud-btn.svg");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;

@@ -10,11 +10,11 @@ $('document').ready(function() {
     buildHTML()
     $('#addUnicorn').click(getMorePictures())
     $('#logo').click(function() {
-        document.location = '/Main/index.html'
+        document.location = '../../index.html'
     })
 })
 function replace() {
-    $('#imageResult').attr('src', '/Main/unicorn.png')
+    $('#imageResult').attr('src', '../../unicorn.png')
 }
 /**
  * Calls the API and fetches a unicorn with the specified id and builds the html page

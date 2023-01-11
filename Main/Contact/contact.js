@@ -4,6 +4,6 @@
 
 $('document').ready(function() {
     $('#logo').click(function() {
-        document.location = '/Main/index.html'
+        document.location = '../index.html'
     })
 })

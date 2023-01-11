@@ -9,7 +9,7 @@ $(document).ready(function() {
     $('#byWho').html(localStorage.getItem('reportedBy'))
     $('#addUnicorn').click(addToDatabase())
     $('#logo').click(function() {
-        document.location = '/Main/index.html'
+        document.location = '../../index.html'
     })
 })
 
@@ -35,7 +35,7 @@ function addToDatabase() {
             url: 'http://localhost:5008/v1/unicorns',
             data: JSON.stringify(data)
         }).done(function() {
-            document.location = '/Main/index.html'
+            document.location = '../../index.html'
         }).fail(function(jqXHR, textStatus, error) {
             if (error) {
                 alert(error)

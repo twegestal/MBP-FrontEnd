@@ -9,7 +9,7 @@ var index //keeps track of shown unicorns
 $('document').ready(function() {
     $('#load-more').click(loadMoreUnicorns())
     $('#logo').click(function() {
-        document.location = '/Main/index.html'
+        document.location = '../index.html'
     })
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/'
@@ -46,7 +46,7 @@ function loadMoreUnicorns() {
 }
 function replace(i) {
     let s = '#u' + i
-    $(s).attr('src', '/Main/unicorn.png')
+    $(s).attr('src', '../unicorn.png')
 }
 /**
  * Fetches one unicorn from the database and adds it to the html page.
@@ -104,6 +104,6 @@ function addTemplate(i) {
 function openSpecific(id) {
     return function() {
         localStorage.setItem('specificID', id)
-        document.location = '/Main/Spottedunicorn/Specificunicorn/specificUnicorn.html'
+        document.location = '../Spottedunicorn/Specificunicorn/specificUnicorn.html'
     }
 }

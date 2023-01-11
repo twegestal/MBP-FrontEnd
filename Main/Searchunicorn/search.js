@@ -96,7 +96,7 @@ function postUnicorn() {
                 document.location = '/Main/Searchunicorn/Pattern/pattern.html'
             }).fail(function(jqXHR, textStatus, error){
                 localStorage.setItem('errorMessage', error)
-                document.location = '/Main/Error/error.html'
+                document.location = '../Error/error.html'
             
             })
         } 
@@ -140,6 +140,6 @@ function validInput() {
 $("document").ready(function() {
     $('#submit').click(postUnicorn());
     $('#logo').click(function() {
-        document.location = '/Main/index.html'
+        document.location = '../index.html'
     })
  });

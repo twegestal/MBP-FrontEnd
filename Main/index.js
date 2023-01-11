@@ -3,7 +3,7 @@
  */
 $(document).ready(function() {
     $('#logo').click(function() {
-        document.location = '/Main/index.html'
+        document.location = './index.html'
     })
     $.ajax({
         url: 'http://localhost:5008/v1/unicorns/'
@@ -21,7 +21,7 @@ $(document).ready(function() {
 })
 function replace(i) {
     let s = '#u' + i
-    $(s).attr('src', '/Main/unicorn.png')
+    $(s).attr('src', './unicorn.png')
 }
 /**
  * Fetches a specific unicorn and builds a html element with its information
@@ -78,6 +78,6 @@ function appendAll(i) {
 function openSpecific(id) {
     return function() {
         localStorage.setItem('specificID', id)
-        document.location = '/Main/Spottedunicorn/Specificunicorn/specificUnicorn.html'
+        document.location = './Spottedunicorn/Specificunicorn/specificUnicorn.html'
     }
 }
