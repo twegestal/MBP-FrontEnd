@@ -204,7 +204,7 @@ h4 {
 .unicornPost > .unicorn-picture img {
   height: 170px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 #logo {

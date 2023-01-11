@@ -34,7 +34,7 @@
 #wrapper main #unicorn-container .unicorn-container-box .unicorn-picture img {
     height: 170px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #wrapper main #unicorn-container .unicorn-container-box .unicorn-heading {
